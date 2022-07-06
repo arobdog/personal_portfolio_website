@@ -3,15 +3,19 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useLocation } from "react-router-dom";
-import { HashLink } from "react-router-hash-link";
 
 const Nav = () => {
   const { pathname } = useLocation();
   return (
     <StyledNav>
+      <h1>
+        <Link id="logo" to="#">
+          Capture
+        </Link>
+      </h1>
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/">1. About Us</Link>
           <Line
             transition={{ duration: 0.75 }}
             initial={{ width: "0%" }}
@@ -19,7 +23,7 @@ const Nav = () => {
           />
         </li>
         <li>
-          <Link to="/work">Projects</Link>
+          <Link to="/work">2. Our Work</Link>
           <Line
             transition={{ duration: 0.75 }}
             initial={{ width: "0%" }}
@@ -27,7 +31,7 @@ const Nav = () => {
           />
         </li>
         <li>
-          <Link to="/contact">Contact</Link>
+          <Link to="/contact">3. Contact Us</Link>
           <Line
             transition={{ duration: 0.75 }}
             initial={{ width: "0%" }}
@@ -40,16 +44,16 @@ const Nav = () => {
 };
 
 const StyledNav = styled.nav`
-  min-height: 6vh;
+  min-height: 10vh;
   display: flex;
   margin: auto;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 10rem;
-  background: #323232;
+  background: #282828;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 5;
   a {
     color: white;
     text-decoration: none;
@@ -57,7 +61,11 @@ const StyledNav = styled.nav`
   ul {
     display: flex;
     list-style: none;
-    padding-left: 40vw;
+  }
+  #logo {
+    font-size: 1.5rem;
+    font-family: "Lobster", cursive;
+    font-weight: lighter;
   }
   li {
     padding-left: 10rem;
@@ -83,7 +91,7 @@ const StyledNav = styled.nav`
 
 const Line = styled(motion.div)`
   height: 0.3rem;
-  background: #14ffec;
+  background: #23d997;
   width: 0%;
   position: absolute;
   bottom: -80%;
