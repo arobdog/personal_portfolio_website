@@ -2,15 +2,16 @@ import React from "react";
 //Global Style
 import GlobalStyle from "./components/GlobalStyle";
 //Import Pages
-import AboutUs from "./pages/AboutUs";
-import ContactUs from "./pages/ContactUs";
-import OurWork from "./pages/OurWork";
+import HomePage from "./pages/HomePage";
+import MyProjects from "./pages/MyProjects";
 import Nav from "./components/Nav";
-import MovieDetail from "./pages/MovieDetail";
 //Router
 import { Routes, Route, useLocation } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 //Animation
 import { AnimatePresence } from "framer-motion";
+
+import ContactSection from "./components/ContactSection";
 
 function App() {
   const location = useLocation();
@@ -20,10 +21,9 @@ function App() {
       <Nav />
       <AnimatePresence exitBeforeEnter>
         <Routes location={location} key={location.pathname}>
-          <Route path="/" element={<AboutUs />} exact />
-          <Route path="/work" element={<OurWork />} exact />
-          <Route path="/work/:id" element={<MovieDetail />} />
-          <Route path="/contact" element={<ContactUs />} exact />
+          <Route path="/" element={<HomePage />} exact />
+          <Route path="/contact" element={<ContactSection />} exact />
+          <Route path="/projects" element={<MyProjects />} exact />
         </Routes>
       </AnimatePresence>
     </div>

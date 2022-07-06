@@ -13,7 +13,7 @@ const GlobalStyle = createGlobalStyle`
         }
     }
     body{
-        background: #1b1b1b;
+        background: #212121;
         font-family: "Inter", sans-serif;
         overflow-x: hidden;
     }
@@ -22,14 +22,15 @@ const GlobalStyle = createGlobalStyle`
         font-size: 1.1rem;
         cursor: pointer;
         padding: 1rem 2rem;
-        border: 3px solid #23d997;
+        border: 3px solid #14ffec;
         background: transparent;
         color: white;
         transition: all 0.5s ease;
         font-family: "Inter", sans-serif;
+        margin-top: 2rem;
         &:hover{
-            background-color: #23d997;
-            color: white;
+            background-color: #14ffec;
+            color: #212121;
         }
         
     }
@@ -49,7 +50,7 @@ const GlobalStyle = createGlobalStyle`
     }
     span{
         font-weight: bold;
-        color: #23d997;
+        color: #14ffec;
     }
     p{
             padding: 3rem 0rem;
