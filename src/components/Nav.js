@@ -11,7 +11,7 @@ const Nav = () => {
     <StyledNav>
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <HashLink to="/#home">Home</HashLink>
           <Line
             transition={{ duration: 0.75 }}
             initial={{ width: "0%" }}
@@ -19,11 +19,11 @@ const Nav = () => {
           />
         </li>
         <li>
-          <Link to="/work">Projects</Link>
+          <Link to="/projects">Projects</Link>
           <Line
             transition={{ duration: 0.75 }}
             initial={{ width: "0%" }}
-            animate={{ width: pathname === "/work" ? "50%" : "0%" }}
+            animate={{ width: pathname === "/projects" ? "50%" : "0%" }}
           />
         </li>
         <li>

@@ -23,7 +23,7 @@ function App() {
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<HomePage />} exact />
           <Route path="/contact" element={<ContactSection />} exact />
-          <Route path="/work" element={<MyProjects />} exact />
+          <Route path="/projects" element={<MyProjects />} exact />
         </Routes>
       </AnimatePresence>
     </div>
