@@ -4,8 +4,6 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-//Import Animation
-import { fade } from "../animation";
 
 const Nav = () => {
   const { pathname } = useLocation();
@@ -13,9 +11,7 @@ const Nav = () => {
     <StyledNav>
       <ul>
         <li>
-          <HashLink to="/#home" variants={fade}>
-            Home
-          </HashLink>
+          <Link to="/">Home</Link>
           <Line
             transition={{ duration: 0.75 }}
             initial={{ width: "0%" }}
@@ -23,11 +19,11 @@ const Nav = () => {
           />
         </li>
         <li>
-          <Link to="/projects">Projects</Link>
+          <Link to="/work">Projects</Link>
           <Line
             transition={{ duration: 0.75 }}
             initial={{ width: "0%" }}
-            animate={{ width: pathname === "/projects" ? "50%" : "0%" }}
+            animate={{ width: pathname === "/work" ? "50%" : "0%" }}
           />
         </li>
         <li>

@@ -38,11 +38,6 @@ const HomeSection = () => {
             Skills
           </motion.button>
         </HashLink>
-        <HashLink to="/projects">
-          <motion.button className="projects-button" variants={fade}>
-            Projects
-          </motion.button>
-        </HashLink>
       </Description>
       <Wave />
     </Section>

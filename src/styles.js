@@ -35,9 +35,6 @@ export const Description = styled.div`
   .skills-button {
     margin-left: 2rem;
   }
-  .projects-button {
-    margin-left: 2rem;
-  }
   @media (max-width: 1300px) {
     padding: 0;
     button {
