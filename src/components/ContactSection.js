@@ -10,54 +10,68 @@ import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 
+import contactImage from "../img/contact-image.svg";
+
 const ContactSection = () => {
   const [element, controls] = useScroll();
   return (
-    <Contact
-      id="contact"
-      variants={fade}
-      ref={element}
-      animate={controls}
-      initial="hidden"
-    >
-      <div>
-        <h2>
-          Get In <span>Contact</span>
-        </h2>
-      </div>
+    <div>
+      <Contact
+        id="contact"
+        variants={fade}
+        ref={element}
+        animate={controls}
+        initial="hidden"
+      >
+        <div>
+          <h2>
+            Get In <span>Contact</span>
+          </h2>
+        </div>
 
-      <ContactForm>
-        <form action="">
-          <div className="Info">
-            <input type="text" placeholder="Name" id="Name" />
-            <input type="email" placeholder="Email" id="Email" />
-            <input type="text" placeholder="Subject" id="Subject" />
-          </div>
-          <div className="Message">
-            <input type="text" placeholder="Message" />
-          </div>
-          <div className="contact-footer">
-            <div>
-              <button type="submit">Send</button>
+        <ContactForm>
+          <form action="">
+            <div className="Info">
+              <input type="text" placeholder="Name" id="Name" />
+              <input type="email" placeholder="Email" id="Email" />
+              <input type="text" placeholder="Subject" id="Subject" />
             </div>
-            <div className="iconLinks">
-              <a href="https://www.linkedin.com/in/arobs/" target="_blank">
-                <FontAwesomeIcon icon={faLinkedin} size="3x" />
-              </a>
-              <a href="https://github.com/alibahbah" target="_blank">
-                <FontAwesomeIcon icon={faGithub} size="3x" />
-              </a>
+            <div className="Message">
+              <input type="text" placeholder="Message" />
             </div>
-          </div>
-        </form>
-      </ContactForm>
-    </Contact>
+            <div className="contact-footer">
+              <div>
+                <button type="submit">Send</button>
+              </div>
+              <div className="iconLinks">
+                <a href="https://www.linkedin.com/in/arobs/" target="_blank">
+                  <FontAwesomeIcon icon={faLinkedin} size="3x" />
+                </a>
+                <a href="https://github.com/alibahbah" target="_blank">
+                  <FontAwesomeIcon icon={faGithub} size="3x" />
+                </a>
+              </div>
+            </div>
+          </form>
+        </ContactForm>
+      </Contact>
+      <ConatactImage
+        variants={fade}
+        ref={element}
+        animate={controls}
+        initial="hidden"
+      >
+        <img src={contactImage} alt="send a message" />
+      </ConatactImage>
+    </div>
   );
 };
 
 const Contact = styled(Section)`
+  z-index: 2;
   display: block;
   box-sizing: border-box;
+  width: 55vw;
 
   h2 {
     padding-bottom: 2rem;
@@ -80,7 +94,7 @@ const ContactForm = styled(motion.div)`
     }
     .contact-footer {
       width: 100%;
-      min-width: 28rem;
+      min-width: 18rem;
       margin: 1rem 2.5rem;
       display: flex;
       flex-wrap: nowrap;
@@ -89,7 +103,8 @@ const ContactForm = styled(motion.div)`
     }
     .iconLinks {
       a {
-        margin: 1rem 0.5rem;
+        padding-left: 1.5rem;
+        margin: 1rem 0rem;
         color: white;
         text-decoration: none;
       }
@@ -107,7 +122,7 @@ const ContactForm = styled(motion.div)`
   .Info {
     display: flex;
     flex-direction: column;
-    min-width: 32rem;
+    min-width: 22.5rem;
     width: 100%;
   }
   .Info input {
@@ -117,12 +132,23 @@ const ContactForm = styled(motion.div)`
   .Message {
     display: block;
     width: 100%;
-    min-width: 32rem;
+    min-width: 22.5rem;
   }
   .Message input {
     height: 13rem;
     margin: 2rem 0rem;
     width: 100%;
+  }
+`;
+
+const ConatactImage = styled(motion.div)`
+  position: absolute;
+  right: 20vh;
+  top: 20vh;
+  z-index: -1;
+  img {
+    scale: 1;
+    opacity: 1;
   }
 `;
 
