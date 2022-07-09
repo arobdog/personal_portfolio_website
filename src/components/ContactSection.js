@@ -12,8 +12,16 @@ import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 import contactImage from "../img/contact-image.svg";
 
+import { useForm, ValidationError } from "@formspree/react";
+
 const ContactSection = () => {
   const [element, controls] = useScroll();
+  // Formspree form
+  const [state, handleSubmit] = useForm("mqknvddl");
+  // Confirmation message on form submission
+  if (state.succeeded) {
+    return <alert>Submission successful. Thanks for contacting me!</alert>;
+  }
   return (
     <div>
       <Contact
@@ -30,18 +38,41 @@ const ContactSection = () => {
         </div>
 
         <ContactForm>
-          <form action="">
+          <form onSubmit={handleSubmit}>
             <div className="Info">
-              <input type="text" placeholder="Name" id="Name" />
-              <input type="email" placeholder="Email" id="Email" />
-              <input type="text" placeholder="Subject" id="Subject" />
+              <input type="text" placeholder="Name" id="Name" required />
+              <input
+                id="email"
+                type="email"
+                name="email"
+                placeholder="Email"
+                required
+              />
+              <ValidationError
+                prefix="Email"
+                field="email"
+                errors={state.errors}
+              />
+              <input type="text" placeholder="Subject" id="Subject" required />
             </div>
             <div className="Message">
-              <input type="text" placeholder="Message" />
+              <textarea
+                required
+                id="message"
+                name="message"
+                placeholder="Message"
+              ></textarea>
+              <ValidationError
+                prefix="Message"
+                field="message"
+                errors={state.errors}
+              />
             </div>
             <div className="contact-footer">
               <div>
-                <button type="submit">Send</button>
+                <button type="submit" disabled={state.submitting}>
+                  Submit
+                </button>
               </div>
               <div className="iconLinks">
                 <a href="https://www.linkedin.com/in/arobs/" target="_blank">
@@ -72,6 +103,7 @@ const Contact = styled(Section)`
   display: block;
   box-sizing: border-box;
   width: 55vw;
+  height: 70vh;
 
   h2 {
     padding-bottom: 2rem;
@@ -126,7 +158,8 @@ const ContactForm = styled(motion.div)`
     width: 100%;
   }
   .Info input {
-    height: 3rem;
+    min-height: 3rem;
+    height: 5vh;
     margin: 1rem 0rem;
   }
   .Message {
@@ -134,10 +167,16 @@ const ContactForm = styled(motion.div)`
     width: 100%;
     min-width: 22.5rem;
   }
-  .Message input {
-    height: 13rem;
+  .Message textarea {
+    background: #323232;
+    color: white;
+    border: none;
+    min-height: 13rem;
+    height: 30vh;
     margin: 2rem 0rem;
     width: 100%;
+    font: normal 1.5rem Inter, sans-serif;
+    padding: 1rem;
   }
 `;
 
@@ -147,8 +186,8 @@ const ConatactImage = styled(motion.div)`
   top: 20vh;
   z-index: -1;
   img {
-    scale: 1;
     opacity: 1;
+    transform: scale(1);
   }
 `;
 

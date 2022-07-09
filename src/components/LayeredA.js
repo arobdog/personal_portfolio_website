@@ -51,6 +51,7 @@ const LayeredA = () => {
           y: a3Position,
           transition: { duration: 0.5, ease: "ease-in-out" },
         }}
+        transform="scale: 1.5"
         src={A3}
         alt="Third letter A layer"
       />
