@@ -20,7 +20,7 @@ const ContactSection = () => {
   const [state, handleSubmit] = useForm("mqknvddl");
   // Confirmation message on form submission
   if (state.succeeded) {
-    return <alert>Submission successful. Thanks for contacting me!</alert>;
+    return <p>Submission successful. Thanks for contacting me!</p>;
   }
   return (
     <div>
