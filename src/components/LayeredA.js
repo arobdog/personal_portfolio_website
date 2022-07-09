@@ -13,6 +13,9 @@ import { ReactComponent as A1 } from "../img/A-layer1.svg";
 import { ReactComponent as A2 } from "../img/A-layer2.svg";
 import { ReactComponent as A3 } from "../img/A-layer3.svg";
 
+//Import Animations
+import { scrollAnim } from "../animation";
+
 const LayeredA = () => {
   // Do calculations for scroll position
   const { scrollYProgress } = useViewportScroll();
@@ -46,6 +49,7 @@ const LayeredA = () => {
           rotate: "-15deg",
           x: a3Position,
           y: a3Position,
+          transition: { duration: 0.5, ease: "ease-in-out" },
         }}
         src={A3}
         alt="Third letter A layer"

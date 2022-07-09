@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import A1 from "../img/A-layer1.svg";
 import A2 from "../img/A-layer1.svg";
 import A3 from "../img/A-layer1.svg";
@@ -6,7 +6,7 @@ import LayeredA from "./LayeredA";
 import { Section, Description, Image, Hide } from "../styles";
 //Framer Motion
 import { motion } from "framer-motion";
-import { titleAnim, fade, photoAnim } from "../animation";
+import { titleAnim, fade, photoAnim, buttonAnim } from "../animation";
 import Wave from "./Wave";
 import styled from "styled-components";
 //React Router
@@ -14,6 +14,7 @@ import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
 const HomeSection = () => {
+  const [isTransitioning, setIsTransitioning] = useState(false);
   return (
     <Section id="home">
       <Description>
@@ -30,7 +31,7 @@ const HomeSection = () => {
             <motion.h2 variants={titleAnim}>Software Engineer</motion.h2>
           </Hide>
         </motion.div>
-        <HashLink to="/#about">
+        <HashLink to="/#about" animate={{ duration: 100, easing: "easeOut" }}>
           <motion.button variants={fade}>About Me</motion.button>
         </HashLink>
         <HashLink to="/#skills">

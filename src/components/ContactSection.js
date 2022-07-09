@@ -6,6 +6,9 @@ import { AnimateSharedLayout } from "framer-motion";
 import { useScroll } from "./useScroll";
 import { fade } from "../animation";
 import { motion } from "framer-motion";
+//FontAwesome Icons
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedin, faGithubSquare } from "@fortawesome/free-brands-svg-icons";
 
 const ContactSection = () => {
   const [element, controls] = useScroll();
@@ -17,14 +20,19 @@ const ContactSection = () => {
       animate={controls}
       initial="hidden"
     >
-      <div>
-        <h2>
-          Get In <span>Contact</span>
-        </h2>
-        <img src="" alt="Linkedin" />
-        <img src="" alt="Email" />
-      </div>
+      <h2>
+        Get In <span>Contact</span>
+      </h2>
+
       <ContactForm>
+        <div className="iconLinks">
+          <a href="https://www.linkedin.com/in/arobs/" target="_blank">
+            <FontAwesomeIcon icon={faLinkedin} size="3x" />
+          </a>
+          <a href="https://github.com/alibahbah" target="_blank">
+            <FontAwesomeIcon icon={faGithubSquare} size="3x" />
+          </a>
+        </div>
         <form action="">
           <div className="Info">
             <input type="text" placeholder="Name" id="Name" />
@@ -43,15 +51,24 @@ const ContactSection = () => {
 
 const Contact = styled(Section)`
   display: block;
+  box-sizing: border-box;
 
   h2 {
     padding-bottom: 2rem;
     font-weight: lighter;
   }
+  .iconLinks {
+    display: inline-block;
+    position: relative;
+    a {
+      margin: 1rem 0.5rem;
+      color: white;
+      text-decoration: none;
+    }
+  }
 `;
 
 const ContactForm = styled(motion.div)`
-  width: 60vw;
   form {
     display: flex;
     flex-direction: row;
@@ -74,19 +91,22 @@ const ContactForm = styled(motion.div)`
   .Info {
     display: flex;
     flex-direction: column;
+    min-width: 32rem;
+    width: 100%;
   }
   .Info input {
-    min-width: 32rem;
-    width: 35vw;
     height: 3rem;
     margin: 1rem 0rem;
   }
   .Message {
+    display: block;
+    width: 100%;
+    min-width: 32rem;
   }
   .Message input {
-    width: 35vw;
     height: 13rem;
     margin: 2rem 0rem;
+    width: 100%;
   }
 `;
 

@@ -81,3 +81,13 @@ export const scrollReveal = {
     },
   },
 };
+
+export const buttonAnim = {
+  transitioning: {
+    transition: {
+      duration: 0.5,
+      ease: "easeOut",
+    },
+  },
+  transitioned: {},
+};
