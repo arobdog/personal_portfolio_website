@@ -25,7 +25,14 @@ const Wave = () => {
 const WaveSvg = styled.svg`
   position: absolute;
   left: 0;
-  z-index: 1;
+  z-index: -2;
+  // Media queries to remove wave in mobile mode
+  @media (max-width: 1600px) {
+    transform: scale(1.2);
+  }
+  @media (max-width: 1200px) {
+    opacity: 0;
+  }
 `;
 
 export default Wave;

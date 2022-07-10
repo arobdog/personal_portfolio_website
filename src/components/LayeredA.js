@@ -74,32 +74,36 @@ const CombinedA = styled(motion.div)`
     top: 13vh;
   }
   @media (max-width: 2000px) {
-    transform: scale(1.6) translateX(-6vw);
-    top: 17vh;
+    transform: scale(1.5) translateX(-5vw);
+    top: 12vh;
   }
   @media (max-width: 1600px) {
-    transform: scale(1.2) translateX(4vw);
-    top: 20vh;
+    transform: scale(1.2) translateX(3vw);
+    top: 18vh;
   }
   @media (max-width: 1200px) {
     transform: scale(1) translateX(-10vw);
     opacity: 0.2;
     top: 25vh;
+    z-index: -1;
   }
   @media (max-width: 800px) {
-    transform: scale(0.75) translateX(0vw);
+    transform: scale(0.85) translateX(0vw);
     opacity: 0.2;
     top: 30vh;
+    z-index: -1;
   }
   @media (max-width: 600px) {
     transform: scale(0.8) translateX(10vw);
     opacity: 0.2;
     top: 30vh;
+    z-index: -1;
   }
   @media (max-width: 400px) {
     transform: scale(0.7) translateX(15vw);
     opacity: 0.2;
     top: 30vh;
+    z-index: -1;
   }
 `;
 
