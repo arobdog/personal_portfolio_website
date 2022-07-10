@@ -8,9 +8,19 @@ const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
     }
     html{
-        @media (max-width: 1700px){
-            font-size: 75%;
+        @media (max-width: 2800px) {
+            font-size: 145%;
         }
+        @media (max-width: 2400px) {
+            font-size: 125%;
+        }
+        @media (max-width: 2000px) {
+            font-size: 100%;
+        }
+        @media (max-width: 1600px){
+            font-size: 80%;
+        }
+        
     }
     body{
         background: #212121;

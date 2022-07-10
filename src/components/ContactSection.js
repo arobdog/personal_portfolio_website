@@ -182,12 +182,12 @@ const ContactForm = styled(motion.div)`
 
 const ConatactImage = styled(motion.div)`
   position: absolute;
-  right: 20vh;
-  top: 20vh;
+  right: 22vh;
+  top: 22vh;
   z-index: -1;
   img {
     opacity: 1;
-    transform: scale(1);
+    transform: scale(1.1);
   }
 `;
 

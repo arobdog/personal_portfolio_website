@@ -64,6 +64,43 @@ const CombinedA = styled(motion.div)`
   top: 25vh;
   background: none;
   z-index: 8;
+  // Media queries for 4k to small mobile friendliness
+  @media (max-width: 2800px) {
+    transform: scale(1.9) translateX(-10vw);
+    top: 10vh;
+  }
+  @media (max-width: 2400px) {
+    transform: scale(1.75) translateX(-8vw);
+    top: 13vh;
+  }
+  @media (max-width: 2000px) {
+    transform: scale(1.6) translateX(-6vw);
+    top: 17vh;
+  }
+  @media (max-width: 1600px) {
+    transform: scale(1.2) translateX(4vw);
+    top: 20vh;
+  }
+  @media (max-width: 1200px) {
+    transform: scale(1) translateX(-10vw);
+    opacity: 0.2;
+    top: 25vh;
+  }
+  @media (max-width: 800px) {
+    transform: scale(0.75) translateX(0vw);
+    opacity: 0.2;
+    top: 30vh;
+  }
+  @media (max-width: 600px) {
+    transform: scale(0.8) translateX(10vw);
+    opacity: 0.2;
+    top: 30vh;
+  }
+  @media (max-width: 400px) {
+    transform: scale(0.7) translateX(15vw);
+    opacity: 0.2;
+    top: 30vh;
+  }
 `;
 
 const StyledA1 = styled(motion(A1))`
@@ -72,7 +109,7 @@ const StyledA1 = styled(motion(A1))`
   position: absolute;
   top: 5vh;
   right: 20vw;
-  scale: 1.5;
+  transform: scale(1.5);
 `;
 
 const StyledA2 = styled(motion(A2))`
@@ -81,7 +118,7 @@ const StyledA2 = styled(motion(A2))`
   position: absolute;
   top: 5vh;
   right: 20vw;
-  scale: 1.5;
+  transform: scale(1.5);
 `;
 const StyledA3 = styled(motion(A3))`
   z-index: 6;
@@ -89,7 +126,7 @@ const StyledA3 = styled(motion(A3))`
   position: absolute;
   top: 5vh;
   right: 20vw;
-  scale: 1.5;
+  transform: scale(1.5);
 `;
 
 export default LayeredA;

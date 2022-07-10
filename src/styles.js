@@ -11,7 +11,15 @@ export const Section = styled(motion.div)`
   color: white;
   padding-top: 2rem;
   width: 60vw;
-  @media (max-width: 1300px) {
+  @media (max-width: 2800px) {
+  }
+  @media (max-width: 1920px) {
+  }
+  @media (max-width: 1200px) {
+    div {
+      width: 95vw;
+    }
+
     display: block;
     padding: 2rem 2rem;
     text-align: center;
