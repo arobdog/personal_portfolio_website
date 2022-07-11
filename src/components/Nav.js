@@ -63,9 +63,11 @@ const StyledNav = styled.nav`
     padding-left: 10rem;
     position: relative;
   }
+  @media (max-width: 1599px) {
+  }
   @media (max-width: 1300px) {
     flex-direction: column;
-    padding: 2rem 1rem;
+    padding: 1rem 1rem;
     #logo {
       display: inline-block;
       padding: 1rem;

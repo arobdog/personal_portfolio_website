@@ -16,13 +16,27 @@ export const Section = styled(motion.div)`
   @media (max-width: 1920px) {
   }
   @media (max-width: 1200px) {
-    div {
-      width: 95vw;
-    }
-
-    display: block;
+    display: flex;
     padding: 2rem 2rem;
     text-align: center;
+    justify-content: center;
+    width: 100vw;
+    min-height: 50rem;
+  }
+  @media (max-width: 800px) {
+    height: 60rem;
+  }
+  @media (max-width: 500px) {
+    height: 50rem;
+  }
+  @media (max-height: 1000px) {
+    height: 66rem;
+  }
+  @media (max-height: 850px) {
+    height: 62rem;
+  }
+  @media (max-height: 700px) {
+    height: 35rem;
   }
 `;
 export const Description = styled.div`
@@ -50,6 +64,8 @@ export const Description = styled.div`
     padding: 0;
     button {
       margin: 2rem 0rem 5rem 0rem;
+    }
+    @media (max-width: 1200px) {
     }
   }
 `;

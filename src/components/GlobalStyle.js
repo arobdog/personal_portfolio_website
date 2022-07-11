@@ -9,16 +9,25 @@ const GlobalStyle = createGlobalStyle`
     }
     html{
         @media (max-width: 2800px) {
-            font-size: 145%;
+            font-size: 125%;
         }
         @media (max-width: 2400px) {
-            font-size: 125%;
+            font-size: 115%;
         }
         @media (max-width: 2000px) {
             font-size: 100%;
         }
         @media (max-width: 1600px){
             font-size: 80%;
+        }
+        @media (max-width: 1200px){
+            font-size: 120%;
+        }
+        @media (max-width: 800px){
+            font-size: 80%;
+        }
+        @media (max-width: 500px){
+            font-size: 75%;
         }
         
     }
@@ -47,6 +56,12 @@ const GlobalStyle = createGlobalStyle`
     h2{
             font-weight: lighter;
             font-size: 4rem;
+            @media (max-height: 850px){
+                font-size: 4.5rem;
+            }
+            @media (max-height: 700px){
+                font-size: 3.5rem;
+            }
     }
     h3{
             color: white;
@@ -63,10 +78,29 @@ const GlobalStyle = createGlobalStyle`
         color: #14ffec;
     }
     p{
-            padding: 3rem 0rem;
-            color: #ccc;
-            font-size: 1.4rem;
-            line-height: 150%;
+        padding: 3rem 0rem;
+        color: #ccc;
+        font-size: 1.4rem;
+        line-height: 150%;
+        @media (max-width: 1200px){
+            font-size: 1.8rem;
+            max-width: 50rem;
+            display: block;
+            position: relative;
+            margin: auto;
+        }
+        @media (max-width: 800px){
+            font-size: 2.1rem;
+        }
+        @media (max-width: 500px){
+            font-size: 2.1rem;
+        }
+        @media (max-height: 850px){
+            font-size: 1.8rem;
+        }
+        @media (max-height: 700px){
+            font-size: 1.3rem;
+        }
     }
 `;
 

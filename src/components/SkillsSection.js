@@ -86,6 +86,26 @@ const SkillsSummary = styled(Section)`
     width: 90%;
     padding: 1rem 0rem 2rem 0rem;
   }
+  @media (max-width: 1200px) {
+    width: 100vw;
+  }
+  @media (max-height: 1000px) {
+    height: 75rem;
+  }
+  @media (max-height: 850px) {
+    height: 60rem;
+  }
+  @media (max-height: 700px) {
+    h2 {
+      font-size: 3rem;
+      padding: 0;
+    }
+    div h3 {
+      padding-bottom: 0;
+      font-size: 1rem;
+    }
+    height: 30rem;
+  }
 `;
 const Skills = styled.div`
   display: flex;
