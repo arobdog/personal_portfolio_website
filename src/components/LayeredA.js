@@ -31,23 +31,37 @@ const LayeredA = () => {
   return (
     <CombinedA>
       <StyledA1
+        onMouseEnter={() => console.log("hello A1")}
+        onMouseLeave={() => console.log("bye A1")}
         className="A1"
         style={{ rotate: "-15deg" }}
         src={A1}
         alt="First letter A layer"
       />
       <StyledA2
+        onMouseEnter={() => console.log("hello A2")}
+        onMouseLeave={() => console.log("bye A2")}
         className="A2"
-        style={{ rotate: "-15deg", x: a2Position, y: a2Position }}
+        style={{
+          rotate: "-15deg",
+          x: a2Position,
+          y: a2Position,
+          transition: "x, 65ms ease-out",
+          transition: "y, 65ms ease-out",
+        }}
         src={A2}
         alt="Second letter A layer"
       />
       <StyledA3
+        onMouseEnter={() => console.log("hello A3")}
+        onMouseLeave={() => console.log("bye A3")}
         className="A3"
         style={{
           rotate: "-15deg",
           x: a3Position,
           y: a3Position,
+          transition: "x, 65ms ease-out",
+          transition: "y, 65ms ease-out",
         }}
         transform="scale: 1.5"
         src={A3}
@@ -111,7 +125,6 @@ const StyledA1 = styled(motion(A1))`
   position: absolute;
   top: 5vh;
   right: 20vw;
-  transform: scale(1);
   pointer-events: none;
   path:hover {
     fill: #7dfffa;

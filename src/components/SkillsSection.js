@@ -79,6 +79,7 @@ const SkillsSection = () => {
 
 const SkillsSummary = styled(Section)`
   width: 60vw;
+  height: 94vh;
   h2 {
     padding-bottom: 2rem;
   }
@@ -89,7 +90,7 @@ const SkillsSummary = styled(Section)`
   @media (max-width: 1200px) {
     width: 100vw;
   }
-  @media (max-height: 1000px) {
+  @media (max-height: 900px) {
     height: 75rem;
   }
   @media (max-height: 850px) {

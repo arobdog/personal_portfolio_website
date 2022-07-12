@@ -5,13 +5,12 @@ import GlobalStyle from "./components/GlobalStyle";
 import HomePage from "./pages/HomePage";
 import MyProjects from "./pages/MyProjects";
 import Nav from "./components/Nav";
+import ContactSection from "./components/ContactSection";
 //Router
 import { Routes, Route, useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 //Animation
 import { AnimatePresence } from "framer-motion";
-
-import ContactSection from "./components/ContactSection";
 
 function App() {
   const location = useLocation();
