@@ -11,7 +11,9 @@ const Nav = () => {
     <StyledNav>
       <ul>
         <li>
-          <HashLink to="/#home">Home</HashLink>
+          <HashLink smooth to="/#home">
+            Home
+          </HashLink>
           <Line
             transition={{ duration: 0.75 }}
             initial={{ width: "0%" }}

@@ -31,10 +31,10 @@ const HomeSection = () => {
             <motion.h2 variants={titleAnim}>Software Engineer</motion.h2>
           </Hide>
         </motion.div>
-        <HashLink to="/#about" animate={{ duration: 100, easing: "easeOut" }}>
+        <HashLink smooth to="/#about">
           <motion.button variants={fade}>About Me</motion.button>
         </HashLink>
-        <HashLink to="/#skills">
+        <HashLink smooth to="/#skills">
           <motion.button className="skills-button" variants={fade}>
             Skills
           </motion.button>
