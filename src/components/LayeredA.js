@@ -31,25 +31,23 @@ const LayeredA = () => {
   return (
     <CombinedA>
       <StyledA1
-        style={{
-          scale: 1,
-          rotate: "-15deg",
-        }}
+        className="A1"
+        style={{ rotate: "-15deg" }}
         src={A1}
         alt="First letter A layer"
       />
       <StyledA2
-        style={{ scale: 1, rotate: "-15deg", x: a2Position, y: a2Position }}
+        className="A2"
+        style={{ rotate: "-15deg", x: a2Position, y: a2Position }}
         src={A2}
         alt="Second letter A layer"
       />
       <StyledA3
+        className="A3"
         style={{
-          scale: 1,
           rotate: "-15deg",
           x: a3Position,
           y: a3Position,
-          transition: { duration: 0.5, ease: "ease-in-out" },
         }}
         transform="scale: 1.5"
         src={A3}
@@ -113,7 +111,17 @@ const StyledA1 = styled(motion(A1))`
   position: absolute;
   top: 5vh;
   right: 20vw;
-  transform: scale(1.5);
+  transform: scale(1);
+  pointer-events: none;
+  path:hover {
+    fill: #7dfffa;
+    stroke: #7dfffa;
+    cursor: pointer;
+    transition: fill, 60ms ease-out;
+  }
+  g {
+    pointer-events: auto;
+  }
 `;
 
 const StyledA2 = styled(motion(A2))`
@@ -122,7 +130,16 @@ const StyledA2 = styled(motion(A2))`
   position: absolute;
   top: 5vh;
   right: 20vw;
-  transform: scale(1.5);
+  pointer-events: none;
+  path:hover {
+    fill: #119499;
+    stroke: #119499;
+    cursor: pointer;
+    transition: fill, 60ms ease-out;
+  }
+  g {
+    pointer-events: auto;
+  }
 `;
 const StyledA3 = styled(motion(A3))`
   z-index: 6;
@@ -130,7 +147,16 @@ const StyledA3 = styled(motion(A3))`
   position: absolute;
   top: 5vh;
   right: 20vw;
-  transform: scale(1.5);
+  pointer-events: none;
+  path:hover {
+    fill: #4d4d4d;
+    stroke: #4d4d4d;
+    cursor: pointer;
+    transition: fill, 60ms ease-out;
+  }
+  g {
+    pointer-events: auto;
+  }
 `;
 
 export default LayeredA;
