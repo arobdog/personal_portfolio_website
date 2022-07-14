@@ -14,7 +14,7 @@ import { ReactComponent as A2 } from "../img/A-layer2.svg";
 import { ReactComponent as A3 } from "../img/A-layer3.svg";
 
 //Import Animations
-import { scrollAnim } from "../animation";
+import { aLayerAnim } from "../animation";
 
 const LayeredA = () => {
   // Do calculations for scroll position
@@ -33,6 +33,10 @@ const LayeredA = () => {
   return (
     <CombinedA>
       <StyledA1
+        variants={aLayerAnim}
+        initial="hidden"
+        animate="show"
+        exit="exit"
         onMouseEnter={() => console.log("hello A1")}
         onMouseLeave={() => console.log("bye A1")}
         className="A1"
@@ -41,6 +45,10 @@ const LayeredA = () => {
         alt="First letter A layer"
       />
       <StyledA2
+        variants={aLayerAnim}
+        initial="hidden"
+        animate="show"
+        exit="exit"
         onMouseEnter={() => console.log("hello A2")}
         onMouseLeave={() => console.log("bye A2")}
         className="A2"
@@ -55,6 +63,10 @@ const LayeredA = () => {
         alt="Second letter A layer"
       />
       <StyledA3
+        variants={aLayerAnim}
+        initial="hidden"
+        animate="show"
+        exit="exit"
         onMouseEnter={null}
         onMouseLeave={null}
         className="A3"
@@ -79,41 +91,41 @@ const CombinedA = styled(motion.div)`
   background: none;
   z-index: 8;
   // Media queries for 4k to small mobile friendliness
-  @media (max-width: 2800px) {
-    transform: scale(1.9) translateX(-10.5vw);
-    top: 14vh;
+  @media screen and (max-width: 2800px) {
+    transform: scale(1.8) translateX(-10.5vw);
+    top: 16vh;
   }
-  @media (max-width: 2400px) {
-    transform: scale(1.75) translateX(-8vw);
-    top: 15vh;
+  @media screen and (max-width: 2400px) {
+    transform: scale(1.65) translateX(-8.5vw);
+    top: 17vh;
   }
-  @media (max-width: 2000px) {
-    transform: scale(1.5) translateX(-5vw);
-    top: 14vh;
+  @media screen and (max-width: 2000px) {
+    transform: scale(1.4) translateX(-5vw);
+    top: 17.5vh;
   }
-  @media (max-width: 1600px) {
+  @media screen and (max-width: 1600px) {
     transform: scale(1.2) translateX(3vw);
     top: 20vh;
   }
-  @media (max-width: 1200px) {
+  @media screen and (max-width: 1200px) {
     transform: scale(1) translateX(-10vw);
     opacity: 0.2;
     top: 27vh;
     z-index: -1;
   }
-  @media (max-width: 800px) {
+  @media screen and (max-width: 800px) {
     transform: scale(0.85) translateX(0vw);
     opacity: 0.2;
     top: 30vh;
     z-index: -1;
   }
-  @media (max-width: 600px) {
+  @media screen and (max-width: 600px) {
     transform: scale(0.8) translateX(10vw);
     opacity: 0.2;
     top: 30vh;
     z-index: -1;
   }
-  @media (max-width: 400px) {
+  @media screen and (max-width: 400px) {
     transform: scale(0.7) translateX(15vw);
     opacity: 0.2;
     top: 30vh;

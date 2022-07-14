@@ -6,7 +6,7 @@ import LayeredA from "../components/LayeredA";
 import AboutMeSection from "../components/AboutMeSection";
 //Animations
 import { motion, useViewportScroll } from "framer-motion";
-import { pageAnimation } from "../animation";
+import { fade, pageAnimation } from "../animation";
 import ScrollTop from "../components/ScrollTop";
 
 const HomePage = () => {

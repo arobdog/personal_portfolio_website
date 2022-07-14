@@ -82,12 +82,26 @@ export const scrollReveal = {
   },
 };
 
-export const buttonAnim = {
-  transitioning: {
+export const aLayerAnim = {
+  hidden: {
+    scale: 0.9,
+    opacity: 1,
+  },
+  show: {
+    scale: 1,
+    opacity: 1,
     transition: {
-      duration: 0.5,
-      ease: "easeOut",
+      duration: 1.5,
+      when: "beforeChildren",
+      ease: "easeInOut",
     },
   },
-  transitioned: {},
+  exit: {
+    exit: {
+      opacity: 0,
+      transition: {
+        duration: 0.5,
+      },
+    },
+  },
 };

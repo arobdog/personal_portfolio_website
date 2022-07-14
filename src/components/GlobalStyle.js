@@ -8,25 +8,25 @@ const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
     }
     html{
-        @media screen and(max-width: 2800px) {
+        @media screen and (max-width: 2800px) {
             font-size: 125%;
         }
-        @media screen and(max-width: 2400px) {
+        @media screen and (max-width: 2400px) {
             font-size: 115%;
         }
-        @media screen and(max-width: 2000px) {
+        @media screen and (max-width: 2000px) {
             font-size: 100%;
         }
-        @media screen and(max-width: 1600px){
+        @media screen and (max-width: 1600px){
             font-size: 80%;
         }
-        @media screen and(max-width: 1200px){
+        @media screen and (max-width: 1200px){
             font-size: 120%;
         }
-        @media screen and(max-width: 800px){
+        @media screen and (max-width: 800px){
             font-size: 80%;
         }
-        @media screen and(max-width: 500px){
+        @media screen and (max-width: 500px){
             font-size: 75%;
         }
         
@@ -53,15 +53,14 @@ const GlobalStyle = createGlobalStyle`
             background-color: #14ffec;
             color: #212121;
         }
-        
     }
     h2{
             font-weight: lighter;
             font-size: 4rem;
-            @media screen and(max-height: 850px){
+            @media screen and (max-height: 850px){
                 font-size: 4.5rem;
             }
-            @media screen and(max-height: 700px){
+            @media screen and (max-height: 700px){
                 font-size: 3.5rem;
             }
     }
@@ -91,16 +90,16 @@ const GlobalStyle = createGlobalStyle`
             position: relative;
             margin: auto;
         }
-        @media screen and(max-width: 800px){
+        @media screen and (max-width: 800px){
             font-size: 2.1rem;
         }
-        @media screen and(max-width: 500px){
+        @media screen and (max-width: 500px){
             font-size: 2.1rem;
         }
-        @media screen and(max-height: 850px){
+        @media screen and (max-height: 850px){
             font-size: 1.8rem;
         }
-        @media screen and(max-height: 700px){
+        @media screen and (max-height: 700px){
             font-size: 1.3rem;
         }
     }

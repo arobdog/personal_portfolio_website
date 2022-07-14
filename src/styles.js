@@ -13,10 +13,6 @@ export const Section = styled(motion.div)`
   width: 60vw;
   overflow-x: hidden;
   overflow-y: hidden;
-  @media screen and (max-width: 2800px) {
-  }
-  @media screen and (max-width: 1920px) {
-  }
   @media screen and (max-width: 1200px) {
     display: flex;
     padding: 2rem 2rem;
@@ -28,12 +24,12 @@ export const Section = styled(motion.div)`
   @media screen and (max-width: 800px) {
     height: 60rem;
   }
-  @media screen and(max-width: 500px) {
+  @media screen and (max-width: 500px) {
     height: 50rem;
   }
-  @media screen and(max-height: 1000px) {
+  @media screen and (max-height: 1000px) {
     height: 66rem;
-    @media screen and(orientation: landscape) {
+    @media screen and (orientation: landscape) {
     }
   }
   @media screen and (max-height: 850px) {
@@ -42,9 +38,9 @@ export const Section = styled(motion.div)`
       height: 40rem;
     }
   }
-  @media screen and(max-height: 700px) {
+  @media screen and (max-height: 700px) {
     height: 35rem;
-    @media screen and(orientation: landscape) {
+    @media screen and (orientation: landscape) {
     }
   }
 `;
