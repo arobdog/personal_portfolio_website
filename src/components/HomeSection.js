@@ -45,7 +45,6 @@ const HomeSection = () => {
           </motion.button>
         </HashLink>
       </Description>
-      <Wave />
     </Section>
   );
 };

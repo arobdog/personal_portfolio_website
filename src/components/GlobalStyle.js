@@ -8,26 +8,25 @@ const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
     }
     html{
-        overflow-x: hidden;
-        @media (max-width: 2800px) {
+        @media screen and(max-width: 2800px) {
             font-size: 125%;
         }
-        @media (max-width: 2400px) {
+        @media screen and(max-width: 2400px) {
             font-size: 115%;
         }
-        @media (max-width: 2000px) {
+        @media screen and(max-width: 2000px) {
             font-size: 100%;
         }
-        @media (max-width: 1600px){
+        @media screen and(max-width: 1600px){
             font-size: 80%;
         }
-        @media (max-width: 1200px){
+        @media screen and(max-width: 1200px){
             font-size: 120%;
         }
-        @media (max-width: 800px){
+        @media screen and(max-width: 800px){
             font-size: 80%;
         }
-        @media (max-width: 500px){
+        @media screen and(max-width: 500px){
             font-size: 75%;
         }
         
@@ -37,7 +36,7 @@ const GlobalStyle = createGlobalStyle`
         position: relative;
         background: #212121;
         font-family: "Inter", sans-serif;
-        overflow-x: hidden;
+        
     }
     button{
         font-weight: bold;
@@ -59,10 +58,10 @@ const GlobalStyle = createGlobalStyle`
     h2{
             font-weight: lighter;
             font-size: 4rem;
-            @media (max-height: 850px){
+            @media screen and(max-height: 850px){
                 font-size: 4.5rem;
             }
-            @media (max-height: 700px){
+            @media screen and(max-height: 700px){
                 font-size: 3.5rem;
             }
     }
@@ -85,23 +84,23 @@ const GlobalStyle = createGlobalStyle`
         color: #ccc;
         font-size: 1.4rem;
         line-height: 150%;
-        @media (max-width: 1200px){
+        @media screen and (max-width: 1200px){
             font-size: 1.8rem;
             max-width: 50rem;
             display: block;
             position: relative;
             margin: auto;
         }
-        @media (max-width: 800px){
+        @media screen and(max-width: 800px){
             font-size: 2.1rem;
         }
-        @media (max-width: 500px){
+        @media screen and(max-width: 500px){
             font-size: 2.1rem;
         }
-        @media (max-height: 850px){
+        @media screen and(max-height: 850px){
             font-size: 1.8rem;
         }
-        @media (max-height: 700px){
+        @media screen and(max-height: 700px){
             font-size: 1.3rem;
         }
     }

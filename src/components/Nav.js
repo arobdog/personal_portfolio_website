@@ -67,7 +67,7 @@ const StyledNav = styled.nav`
   }
   @media (max-width: 1599px) {
   }
-  @media (max-width: 1300px) {
+  @media (max-width: 1200px) {
     flex-direction: column;
     padding: 1rem 1rem;
     #logo {

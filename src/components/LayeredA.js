@@ -24,9 +24,9 @@ const LayeredA = () => {
     (value) => value * -100
   );
   //A2 Layer Values
-  const a2Position = useTransform(scrollYPercentage, (value) => value * 0.35);
+  const a2Position = useTransform(scrollYPercentage, (value) => value * 0.325);
   //A3 Layer Values
-  const a3Position = useTransform(scrollYPercentage, (value) => value * 0.7);
+  const a3Position = useTransform(scrollYPercentage, (value) => value * 0.65);
 
   let onHoverOffset = 0;
 
@@ -80,25 +80,25 @@ const CombinedA = styled(motion.div)`
   z-index: 8;
   // Media queries for 4k to small mobile friendliness
   @media (max-width: 2800px) {
-    transform: scale(1.9) translateX(-10vw);
-    top: 10vh;
+    transform: scale(1.9) translateX(-10.5vw);
+    top: 14vh;
   }
   @media (max-width: 2400px) {
     transform: scale(1.75) translateX(-8vw);
-    top: 13vh;
+    top: 15vh;
   }
   @media (max-width: 2000px) {
     transform: scale(1.5) translateX(-5vw);
-    top: 12vh;
+    top: 14vh;
   }
   @media (max-width: 1600px) {
     transform: scale(1.2) translateX(3vw);
-    top: 18vh;
+    top: 20vh;
   }
   @media (max-width: 1200px) {
     transform: scale(1) translateX(-10vw);
     opacity: 0.2;
-    top: 25vh;
+    top: 27vh;
     z-index: -1;
   }
   @media (max-width: 800px) {
@@ -143,8 +143,8 @@ const StyledA2 = styled(motion(A2))`
   z-index: 7;
   opacity: 100%;
   position: absolute;
-  top: 5vh;
-  right: 20vw;
+  top: 4vh;
+  right: 20.5vw;
   pointer-events: none;
   path:hover {
     fill: #119499;
@@ -160,8 +160,8 @@ const StyledA3 = styled(motion(A3))`
   z-index: 6;
   opacity: 100%;
   position: absolute;
-  top: 5vh;
-  right: 20vw;
+  top: 3vh;
+  right: 21vw;
   pointer-events: none;
   path:hover {
     fill: #4d4d4d;
