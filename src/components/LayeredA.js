@@ -36,7 +36,6 @@ const LayeredA = () => {
         variants={aLayerAnim}
         initial="hidden"
         animate="show"
-        exit="exit"
         onMouseEnter={() => console.log("hello A1")}
         onMouseLeave={() => console.log("bye A1")}
         className="A1"
@@ -48,7 +47,6 @@ const LayeredA = () => {
         variants={aLayerAnim}
         initial="hidden"
         animate="show"
-        exit="exit"
         onMouseEnter={() => console.log("hello A2")}
         onMouseLeave={() => console.log("bye A2")}
         className="A2"
@@ -56,8 +54,8 @@ const LayeredA = () => {
           rotate: "-15deg",
           x: a2Position,
           y: a2Position,
-          transition: "x, 65ms ease-out",
-          transition: "y, 65ms ease-out",
+          transition: "x, 90ms ease-out",
+          transition: "y, 90ms ease-out",
         }}
         src={A2}
         alt="Second letter A layer"
@@ -66,7 +64,6 @@ const LayeredA = () => {
         variants={aLayerAnim}
         initial="hidden"
         animate="show"
-        exit="exit"
         onMouseEnter={null}
         onMouseLeave={null}
         className="A3"
@@ -74,8 +71,8 @@ const LayeredA = () => {
           rotate: "-15deg",
           x: a3Position,
           y: a3Position,
-          transition: "x, 65ms ease-out",
-          transition: "y, 65ms ease-out",
+          transition: "x, 90ms ease-out",
+          transition: "y, 90ms ease-out",
         }}
         transform="scale: 1.5"
         src={A3}
