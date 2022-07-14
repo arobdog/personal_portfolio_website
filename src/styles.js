@@ -11,6 +11,9 @@ export const Section = styled(motion.div)`
   color: white;
   padding-top: 2rem;
   width: 60vw;
+  @media screen and (orientation: landscape) {
+    width: 100vw;
+  }
   @media (max-width: 2800px) {
   }
   @media (max-width: 1920px) {

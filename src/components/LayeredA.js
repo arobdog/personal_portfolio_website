@@ -28,6 +28,8 @@ const LayeredA = () => {
   //A3 Layer Values
   const a3Position = useTransform(scrollYPercentage, (value) => value * 0.7);
 
+  let onHoverOffset = 0;
+
   return (
     <CombinedA>
       <StyledA1
@@ -53,8 +55,8 @@ const LayeredA = () => {
         alt="Second letter A layer"
       />
       <StyledA3
-        onMouseEnter={() => console.log("hello A3")}
-        onMouseLeave={() => console.log("bye A3")}
+        onMouseEnter={null}
+        onMouseLeave={null}
         className="A3"
         style={{
           rotate: "-15deg",

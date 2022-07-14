@@ -8,6 +8,7 @@ const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
     }
     html{
+        overflow-x: hidden;
         @media (max-width: 2800px) {
             font-size: 125%;
         }
@@ -32,6 +33,8 @@ const GlobalStyle = createGlobalStyle`
         
     }
     body{
+        overflow-x: hidden;
+        position: relative;
         background: #212121;
         font-family: "Inter", sans-serif;
         overflow-x: hidden;
