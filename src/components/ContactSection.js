@@ -161,6 +161,7 @@ const ContactForm = styled(motion.div)`
     min-height: 3rem;
     height: 5vh;
     margin: 1rem 0rem;
+    box-shadow: 0.5rem 0.5rem 0.5rem #1f1f1f;
   }
   .Message {
     display: block;
@@ -177,6 +178,7 @@ const ContactForm = styled(motion.div)`
     width: 100%;
     font: normal 1.5rem Inter, sans-serif;
     padding: 1rem;
+    box-shadow: 0.5rem 0.5rem 0.5rem #1f1f1f;
   }
 `;
 
