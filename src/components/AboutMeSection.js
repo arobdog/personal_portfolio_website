@@ -14,18 +14,20 @@ const AboutMeSection = () => {
           A Bit <span>About Me</span>
         </h2>
         <p>
-          I am a professional embedded software engineer based in Auckland that
-          is learning Full Stack software development. I am focusing on{" "}
-          <span>JavaScript</span> and <span>React</span> for the frontend and{" "}
-          <span>.NET</span> for the backend.
+          I am an embedded software engineer based in Auckland that is learning
+          Full Stack software development. I am focusing on{" "}
+          <span>JavaScript</span> primarily, with <span>React</span> for the
+          frontend and <span>Node.js</span> for the backend.
         </p>
         <p>
           Currently most of my time outside of work is spent working on projects
-          which use these technologies.
+          which use these technologies. I believe that learning by doing is the
+          most effective way.
         </p>
         <p>
-          Apart from coding I enjoy calisthenics, bouldering and learning
-          foreign languages.
+          Apart from coding I enjoy calisthenics, bouldering, learning foreign
+          languages and hanging out with friends. I also try to live a balanced
+          life and do activities outdoors whenever I can.
         </p>
       </Description>
     </Section>

@@ -97,7 +97,7 @@ const GlobalStyle = createGlobalStyle`
             font-size: 2.1rem;
         }
         @media screen and (max-height: 850px){
-            font-size: 1.8rem;
+            font-size: 1.6rem;
         }
         @media screen and (max-height: 700px){
             font-size: 1.3rem;

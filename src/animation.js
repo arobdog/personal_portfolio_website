@@ -84,7 +84,7 @@ export const scrollReveal = {
 
 export const aLayerAnim = {
   hidden: {
-    scale: 0.9,
+    scale: 0.8,
     opacity: 1,
   },
   show: {

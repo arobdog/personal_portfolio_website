@@ -50,6 +50,7 @@ export const Description = styled.div`
   z-index: 2;
   p {
     padding: 1.5rem 0rem;
+    width: 95%;
   }
   h2 {
     font-weight: lighter;
