@@ -36,8 +36,12 @@ const LayeredA = ({ skillsSelection, setSkillsSelection }) => {
         variants={aLayerAnim}
         initial="hidden"
         animate="show"
-        onMouseEnter={() => setSkillsSelection(["visible", "hidden", "hidden"])}
-        onMouseLeave={() => setSkillsSelection(["hidden", "hidden", "hidden"])}
+        onMouseEnter={() =>
+          setSkillsSelection(["hidden", "visible", "hidden", "hidden"])
+        }
+        onMouseLeave={() =>
+          setSkillsSelection(["visible", "hidden", "hidden", "hidden"])
+        }
         className="A1"
         style={{ rotate: "-15deg" }}
         src={A1}
@@ -47,8 +51,12 @@ const LayeredA = ({ skillsSelection, setSkillsSelection }) => {
         variants={aLayerAnim}
         initial="hidden"
         animate="show"
-        onMouseEnter={() => setSkillsSelection(["hidden", "visible", "hidden"])}
-        onMouseLeave={() => setSkillsSelection(["hidden", "hidden", "hidden"])}
+        onMouseEnter={() =>
+          setSkillsSelection(["hidden", "hidden", "visible", "hidden"])
+        }
+        onMouseLeave={() =>
+          setSkillsSelection(["visible", "hidden", "hidden", "hidden"])
+        }
         className="A2"
         style={{
           rotate: "-15deg",
@@ -65,10 +73,10 @@ const LayeredA = ({ skillsSelection, setSkillsSelection }) => {
         initial="hidden"
         animate="show"
         onMouseEnter={() => {
-          setSkillsSelection(["hidden", "hidden", "visible"]);
+          setSkillsSelection(["hidden", "hidden", "hidden", "visible"]);
         }}
         onMouseLeave={() => {
-          setSkillsSelection(["hidden", "hidden", "hidden"]);
+          setSkillsSelection(["visible", "hidden", "hidden", "hidden"]);
         }}
         className="A3"
         style={{

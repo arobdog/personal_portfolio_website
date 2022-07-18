@@ -26,8 +26,8 @@ const AboutMeSection = () => {
         </p>
         <p>
           Apart from coding I enjoy calisthenics, bouldering, learning foreign
-          languages and hanging out with friends. I also try to live a balanced
-          life and do activities outdoors whenever I can.
+          languages and hanging out with friends. I try to live a balanced life
+          and do activities outdoors whenever I can.
         </p>
       </Description>
     </Section>
