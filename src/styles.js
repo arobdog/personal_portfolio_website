@@ -57,8 +57,8 @@ export const Description = styled.div`
     padding-bottom: 1rem;
   }
   .skills-title {
-    padding: 1rem 1rem;
-    font-size: 2rem;
+    padding: 1rem 0rem;
+    font-size: 1.5rem;
   }
   .skills-button {
     margin-left: 2rem;

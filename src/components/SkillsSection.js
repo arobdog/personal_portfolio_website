@@ -1,10 +1,10 @@
 import React from "react";
 //Import Icons
-import cSharpIcon from "../img/skills-icons/c_sharp_icon.svg";
+import nodejsIcon from "../img/skills-icons/node.js_logo.svg";
 import javascriptIcon from "../img/skills-icons/javascript_icon.svg";
 import reactIcon from "../img/skills-icons/react_icon.svg";
 import pythonIcon from "../img/skills-icons/python_icon.svg";
-//import cIcon from "../img/skills-icons/c_programming_language_icon.svg";
+import cIcon from "../img/skills-icons/C.svg";
 import gitIcon from "../img/skills-icons/git_icon.svg";
 import vsCodeIcon from "../img/skills-icons/visual_studio_code_icon.svg";
 //Styles
@@ -13,7 +13,7 @@ import { Section, Description, Image } from "../styles";
 import { fade } from "../animation";
 import { useScroll } from "./useScroll";
 
-const SkillsSection = () => {
+const SkillsSection = ({ skillsSelection, setSkillsSelection }) => {
   const [element, controls] = useScroll();
   return (
     <SkillsSummary
@@ -27,50 +27,65 @@ const SkillsSection = () => {
         <h2>
           My <span>Skills</span>
         </h2>
-        <div>
-          <h3 className="skills-title">Languages</h3>
-          <Skills>
-            <Skill>
-              <div className="icon">
-                <img src={pythonIcon} alt="" />
+        <div className="skills-container">
+          <div>
+            <Skills id="frontend-skills">
+              <div className={`${skillsSelection[0]}`}>
+                <p className=" skills-title">Frontend</p>
+                <Skill>
+                  <div className="icon">
+                    <img src={pythonIcon} alt="" />
+                  </div>
+                  <p></p>
+                </Skill>
+                <Skill>
+                  <div className="icon">
+                    <img src={cIcon} alt="" />
+                  </div>
+                  <p></p>
+                </Skill>
+                <Skill>
+                  <div className="icon">
+                    <img src={javascriptIcon} alt="" />
+                  </div>
+                  <p></p>
+                </Skill>
               </div>
-              <h3>Python</h3>
-            </Skill>
-            <Skill>
-              <div className="icon">
-                <img src={cSharpIcon} alt="" />
+            </Skills>
+          </div>
+          <div>
+            <Skills id="technologies-skills">
+              <div className={`${skillsSelection[1]}`}>
+                <p className=" skills-title">Technologies</p>
+                <Skill>
+                  <div className="icon">
+                    <img src={reactIcon} alt="React" />
+                  </div>
+                  <p>React</p>
+                </Skill>
               </div>
-              <h3>C#</h3>
-            </Skill>
-          </Skills>
-        </div>
-        <div>
-          <h3 className="skills-title">Technologies</h3>
-          <Skills>
-            <Skill>
-              <div className="icon">
-                <img src={reactIcon} alt="React" />
+            </Skills>
+          </div>
+          <div>
+            <Skills id="backend-skills">
+              <div className={`${skillsSelection[2]}`}>
+                <p className=" skills-title">Backend</p>
+                <Skill>
+                  <div className="icon">
+                    <img src={gitIcon} alt="Git" />
+                  </div>
+                  <p>Git</p>
+                </Skill>
+
+                <Skill>
+                  <div className="icon">
+                    <img src={vsCodeIcon} alt="Git" />
+                  </div>
+                  <p>VS Code</p>
+                </Skill>
               </div>
-              <h3>ReactJS</h3>
-            </Skill>
-          </Skills>
-        </div>
-        <div>
-          <h3 className="skills-title">Tools</h3>
-          <Skills>
-            <Skill>
-              <div className="icon">
-                <img src={gitIcon} alt="Git" />
-              </div>
-              <h3>Git</h3>
-            </Skill>
-            <Skill>
-              <div className="icon">
-                <img src={vsCodeIcon} alt="Git" />
-              </div>
-              <h3>VS Code</h3>
-            </Skill>
-          </Skills>
+            </Skills>
+          </div>
         </div>
       </Description>
     </SkillsSummary>
@@ -80,8 +95,11 @@ const SkillsSection = () => {
 const SkillsSummary = styled(Section)`
   width: 60vw;
   height: 94vh;
+  position: relative;
+  display: block;
   h2 {
     padding-bottom: 2rem;
+    top: 0;
   }
   p {
     width: 90%;
@@ -102,7 +120,6 @@ const SkillsSummary = styled(Section)`
       padding: 0;
     }
     div h3 {
-      padding-bottom: 0;
       font-size: 1rem;
     }
     height: 30rem;
@@ -111,24 +128,51 @@ const SkillsSummary = styled(Section)`
 const Skills = styled.div`
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 40rem;
+  width: 40vw;
+  position: absolute;
+  opacity: 1;
+  margin: auto;
   @media (max-width: 1300px) {
     justify-content: center;
   }
+  p {
+    text-align: center;
+  }
+  .hidden {
+    opacity: 0;
+    transform: translateX(-200%);
+    transition: all 0.5s ease-out;
+  }
+  .visible {
+    opacity: 1;
+    transform: translateX(0%);
+    transition: all 0.5s ease;
+  }
 `;
 const Skill = styled.div`
-  flex-basis: 8rem;
+  flex-basis: 6rem;
   display: block;
 
-  h3 {
+  p {
+    margin: auto;
     background: none;
     color: white;
-    padding: 1.5rem 0rem;
+    padding: 0rem 0rem;
+    text-align: center;
+    font-size: 1.2rem;
   }
 
   .icon {
-    display: block;
+    text-align: center;
+    margin: auto;
+    overflow: hidden;
     img {
+      margin-bottom: 1rem;
       width: 4rem;
+      opacity: 0.75;
     }
   }
 `;

@@ -15,14 +15,14 @@ const AboutMeSection = () => {
         </h2>
         <p>
           I am an embedded software engineer based in Auckland that is learning
-          Full Stack software development. I am focusing on{" "}
-          <span>JavaScript</span> primarily, with <span>React</span> for the
-          frontend and <span>Node.js</span> for the backend.
+          Full Stack software development. I am focusing primarily on{" "}
+          <span>JavaScript</span>, with <span>React</span> for the frontend and{" "}
+          <span>Node.js</span> for the backend.
         </p>
         <p>
           Currently most of my time outside of work is spent working on projects
-          which use these technologies. I believe that learning by doing is the
-          most effective way.
+          which use these technologies. I believe that learning by doing is most
+          effective.
         </p>
         <p>
           Apart from coding I enjoy calisthenics, bouldering, learning foreign

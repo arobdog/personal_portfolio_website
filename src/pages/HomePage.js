@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 //Page Components
 import HomeSection from "../components/HomeSection";
 import SkillsSection from "../components/SkillsSection";
@@ -10,6 +10,11 @@ import { fade, pageAnimation } from "../animation";
 import ScrollTop from "../components/ScrollTop";
 
 const HomePage = () => {
+  const [skillsSelection, setSkillsSelection] = useState([
+    "visible",
+    "hidden",
+    "hidden",
+  ]);
   return (
     <motion.div
       variants={pageAnimation}
@@ -17,10 +22,16 @@ const HomePage = () => {
       animate="show"
       exit="exit"
     >
-      <LayeredA />
+      <LayeredA
+        skillsSelection={skillsSelection}
+        setSkillsSelection={setSkillsSelection}
+      />
       <HomeSection />
       <AboutMeSection />
-      <SkillsSection />
+      <SkillsSection
+        skillsSelection={skillsSelection}
+        setSkillsSelection={setSkillsSelection}
+      />
       <ScrollTop />
     </motion.div>
   );

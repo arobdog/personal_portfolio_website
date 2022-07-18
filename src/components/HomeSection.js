@@ -14,7 +14,6 @@ import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
 const HomeSection = () => {
-  const [isTransitioning, setIsTransitioning] = useState(false);
   return (
     <Section id="home">
       <Description>

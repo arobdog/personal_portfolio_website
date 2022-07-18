@@ -16,7 +16,7 @@ import { ReactComponent as A3 } from "../img/A-layer3.svg";
 //Import Animations
 import { aLayerAnim } from "../animation";
 
-const LayeredA = () => {
+const LayeredA = ({ skillsSelection, setSkillsSelection }) => {
   // Do calculations for scroll position
   const { scrollYProgress } = useViewportScroll();
   const scrollYPercentage = useTransform(
@@ -36,8 +36,8 @@ const LayeredA = () => {
         variants={aLayerAnim}
         initial="hidden"
         animate="show"
-        onMouseEnter={() => console.log("hello A1")}
-        onMouseLeave={() => console.log("bye A1")}
+        onMouseEnter={() => setSkillsSelection(["visible", "hidden", "hidden"])}
+        onMouseLeave={() => setSkillsSelection(["hidden", "hidden", "hidden"])}
         className="A1"
         style={{ rotate: "-15deg" }}
         src={A1}
@@ -47,8 +47,8 @@ const LayeredA = () => {
         variants={aLayerAnim}
         initial="hidden"
         animate="show"
-        onMouseEnter={() => console.log("hello A2")}
-        onMouseLeave={() => console.log("bye A2")}
+        onMouseEnter={() => setSkillsSelection(["hidden", "visible", "hidden"])}
+        onMouseLeave={() => setSkillsSelection(["hidden", "hidden", "hidden"])}
         className="A2"
         style={{
           rotate: "-15deg",
@@ -64,8 +64,12 @@ const LayeredA = () => {
         variants={aLayerAnim}
         initial="hidden"
         animate="show"
-        onMouseEnter={null}
-        onMouseLeave={null}
+        onMouseEnter={() => {
+          setSkillsSelection(["hidden", "hidden", "visible"]);
+        }}
+        onMouseLeave={() => {
+          setSkillsSelection(["hidden", "hidden", "hidden"]);
+        }}
         className="A3"
         style={{
           rotate: "-15deg",
