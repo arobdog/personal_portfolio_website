@@ -209,7 +209,7 @@ const Skills = styled.div`
     transition: all 0.5s ease;
   }
   .skill-wrapper {
-    padding-top: 5rem;
+    padding-top: 4rem;
     display: flex;
     flex-wrap: wrap;
     flex-basis: 2rem;

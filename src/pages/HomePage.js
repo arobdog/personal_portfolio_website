@@ -11,9 +11,9 @@ import ScrollTop from "../components/ScrollTop";
 
 const HomePage = () => {
   const [skillsSelection, setSkillsSelection] = useState([
-    "hidden",
-    "hidden",
     "visible",
+    "hidden",
+    "hidden",
     "hidden",
   ]);
   return (
