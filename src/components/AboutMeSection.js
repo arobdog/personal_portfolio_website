@@ -8,7 +8,13 @@ import { useScroll } from "./useScroll";
 const AboutMeSection = () => {
   const [element, controls] = useScroll();
   return (
-    <Section id="about">
+    <Section
+      id="about"
+      variants={fade}
+      animate={controls}
+      initial="hidden"
+      ref={element}
+    >
       <Description>
         <h2>
           A Bit <span>About Me</span>

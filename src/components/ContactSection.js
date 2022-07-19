@@ -36,7 +36,6 @@ const ContactSection = () => {
             Get In <span>Contact</span>
           </h2>
         </div>
-
         <ContactForm>
           <form onSubmit={handleSubmit}>
             <div className="Info">
@@ -104,7 +103,7 @@ const Contact = styled(Section)`
   box-sizing: border-box;
   width: 55vw;
   height: 70vh;
-
+  padding-top: 3rem;
   h2 {
     padding-bottom: 2rem;
     font-weight: lighter;

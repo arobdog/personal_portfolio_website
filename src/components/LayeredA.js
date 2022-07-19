@@ -101,19 +101,19 @@ const CombinedA = styled(motion.div)`
   z-index: 8;
   // Media queries for 4k to small mobile friendliness
   @media screen and (max-width: 2800px) {
-    transform: scale(1.8) translateX(-10.5vw);
-    top: 16vh;
+    transform: scale(1.7) translateX(-7.5vw);
+    top: 18vh;
   }
   @media screen and (max-width: 2400px) {
-    transform: scale(1.65) translateX(-8.5vw);
+    transform: scale(1.55) translateX(-5.5vw);
     top: 17vh;
   }
   @media screen and (max-width: 2000px) {
-    transform: scale(1.4) translateX(-5vw);
+    transform: scale(1.3) translateX(-2vw);
     top: 17.5vh;
   }
   @media screen and (max-width: 1600px) {
-    transform: scale(1.2) translateX(3vw);
+    transform: scale(1.1) translateX(3vw);
     top: 20vh;
   }
   @media screen and (max-width: 1200px) {

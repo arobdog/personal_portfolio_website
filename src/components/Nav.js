@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useLocation } from "react-router-dom";
-import { HashLink } from "react-router-hash-link";
+import { NavHashLink } from "react-router-hash-link";
 
 const Nav = () => {
   const { pathname } = useLocation();
@@ -11,9 +11,9 @@ const Nav = () => {
     <StyledNav>
       <ul>
         <li>
-          <HashLink smooth to="/#home">
+          <NavHashLink smooth to="/#home">
             Home
-          </HashLink>
+          </NavHashLink>
           <Line
             transition={{ duration: 0.75 }}
             initial={{ width: "0%" }}

@@ -13,6 +13,13 @@ import reduxIcon from "../img/skills-icons/redux-logo.svg";
 import jiraIcon from "../img/skills-icons/jira-icon.svg";
 import bitbucketIcon from "../img/skills-icons/bitbucket-icon.svg";
 
+//Font Awesome Icons
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faChevronLeft,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
+
 //Styles
 import styled from "styled-components";
 import { Section, Description, Image } from "../styles";
@@ -87,7 +94,7 @@ const SkillsSection = ({ skillsSelection, setSkillsSelection }) => {
             <Skills id="technologies-skills">
               <div className={`${skillsSelection[2]}`}>
                 <div className="skill-wrapper">
-                  <p>Additional Languages</p>
+                  <p>Other Languages</p>
                   <Skill>
                     <div className="icon">
                       <img src={pythonIcon} alt="" />
@@ -197,6 +204,8 @@ const Skills = styled.div`
     text-align: center;
     font-size: 1.8rem;
     width: 100%;
+    padding: 1.2rem;
+    padding-top: 2rem;
   }
   .hidden {
     opacity: 0;

@@ -4,12 +4,13 @@ import { motion } from "framer-motion";
 //Styled Components
 export const Section = styled(motion.div)`
   min-height: 94vh !important;
+  max-height: 94vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 5rem 10rem;
   color: white;
-  padding-top: 2rem;
+  padding-top: 6rem;
   width: 60vw;
   overflow-x: hidden;
   overflow-y: hidden;
