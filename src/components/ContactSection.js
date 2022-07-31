@@ -29,17 +29,8 @@ const ContactSection = () => {
           </h2>
         </div>
         <ContactForm>
-          <form
-            name="contact"
-            method="POST"
-            netlify
-            onSubmit="submit"
-            data-netlify-honeypot="bot-field"
-          >
+          <form name="contact" method="POST">
             <input type="hidden" name="form-name" value="contact" />
-            <div hidden>
-              <input name="bot-field" />
-            </div>
             <div className="Info">
               <input
                 type="text"
