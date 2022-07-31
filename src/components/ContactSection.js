@@ -37,9 +37,15 @@ const ContactSection = () => {
           </h2>
         </div>
         <ContactForm>
-          <form onSubmit={handleSubmit}>
+          <form action="POST" data-netlify="true">
             <div className="Info">
-              <input type="text" placeholder="Name" id="Name" required />
+              <input
+                type="text"
+                placeholder="Name"
+                id="Name"
+                name="name"
+                required
+              />
               <input
                 id="email"
                 type="email"
@@ -47,12 +53,7 @@ const ContactSection = () => {
                 placeholder="Email"
                 required
               />
-              <ValidationError
-                prefix="Email"
-                field="email"
-                errors={state.errors}
-              />
-              <input type="text" placeholder="Subject" id="Subject" required />
+              <ValidationError prefix="Email" field="email" />
             </div>
             <div className="Message">
               <textarea
@@ -61,17 +62,11 @@ const ContactSection = () => {
                 name="message"
                 placeholder="Message"
               ></textarea>
-              <ValidationError
-                prefix="Message"
-                field="message"
-                errors={state.errors}
-              />
+              <ValidationError prefix="Message" field="message" />
             </div>
             <div className="contact-footer">
               <div>
-                <button type="submit" disabled={state.submitting}>
-                  Submit
-                </button>
+                <button type="submit">Submit</button>
               </div>
               <div className="iconLinks">
                 <a href="https://github.com/alibahbah" target="_blank">
