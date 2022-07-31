@@ -43,14 +43,14 @@ const ContactSection = () => {
             <div className="Info">
               <input
                 type="text"
-                placeholder="Name"
-                id="Name"
+                id="name"
                 name="name"
+                placeholder="Name"
                 required
               />
               <input
-                id="email"
                 type="email"
+                id="email"
                 name="email"
                 placeholder="Email"
                 required
