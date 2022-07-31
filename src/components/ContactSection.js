@@ -39,7 +39,7 @@ const ContactSection = () => {
         <ContactForm>
           <form
             name="contact"
-            method="POST"
+            method="post"
             data-netlify="true"
             onSubmit="submit"
             data-netlify-honeypot="bot-field"
