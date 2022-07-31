@@ -12,16 +12,8 @@ import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 import contactImage from "../img/contact-image.svg";
 
-import { useForm, ValidationError } from "@formspree/react";
-
 const ContactSection = () => {
   const [element, controls] = useScroll();
-  // Formspree form
-  const [state, handleSubmit] = useForm("mqknvddl");
-  // Confirmation message on form submission
-  if (state.succeeded) {
-    return <p>Submission successful. Thanks for contacting me!</p>;
-  }
   return (
     <div>
       <Contact
@@ -39,6 +31,7 @@ const ContactSection = () => {
         <ContactForm>
           <form
             name="contact"
+            action="/contact"
             method="post"
             data-netlify="true"
             onSubmit="submit"
@@ -63,16 +56,14 @@ const ContactSection = () => {
                 placeholder="Email"
                 required
               />
-              <ValidationError prefix="Email" field="email" />
             </div>
             <div className="Message">
               <textarea
-                required
                 id="message"
                 name="message"
                 placeholder="Message"
+                required
               ></textarea>
-              <ValidationError prefix="Message" field="message" />
             </div>
             <div className="contact-footer">
               <div>
