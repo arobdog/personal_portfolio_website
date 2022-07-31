@@ -37,7 +37,7 @@ const ContactSection = () => {
           </h2>
         </div>
         <ContactForm>
-          <form action="POST" data-netlify="true">
+          <form name="contact" action="POST" data-netlify="true">
             <div className="Info">
               <input
                 type="text"
