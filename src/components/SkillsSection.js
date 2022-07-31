@@ -145,6 +145,47 @@ const SkillsSection = ({ skillsSelection, setSkillsSelection }) => {
               </div>
             </Skills>
           </div>
+          <div>
+            <Skills>
+              <div className={`all-skills`}>
+                <div className="skill-wrapper">
+                  <p>
+                    <span>Full Stack</span>
+                  </p>
+                  <Skill>
+                    <div className="icon">
+                      <img src={javascript} alt="JavaScript" />
+                    </div>
+                    <p>JavaScript</p>
+                  </Skill>
+                  <Skill>
+                    <div className="icon">
+                      <img src={react} alt="React" />
+                    </div>
+                    <p>React</p>
+                  </Skill>
+                  <Skill>
+                    <div className="icon">
+                      <img src={redux} alt="Redux" />
+                    </div>
+                    <p>Redux</p>
+                  </Skill>
+                  <Skill>
+                    <div className="icon">
+                      <img src={typescript} alt="TypeScript" />
+                    </div>
+                    <p>TypeScript</p>
+                  </Skill>
+                  <Skill>
+                    <div className="icon">
+                      <img src={nodejs} alt="Node.js" />
+                    </div>
+                    <p>Node.js</p>
+                  </Skill>
+                </div>
+              </div>
+            </Skills>
+          </div>
         </div>
       </Description>
     </SkillsSummary>
@@ -177,7 +218,6 @@ const SkillsSummary = styled(Section)`
   @media (max-height: 700px) {
     h2 {
       font-size: 3rem;
-      padding: 0;
     }
     div h3 {
       font-size: 1rem;
@@ -191,7 +231,7 @@ const Skills = styled.div`
   position: absolute;
   opacity: 1;
   margin: auto;
-  @media (max-width: 1300px) {
+  @media (max-width: 1200px) {
     justify-content: center;
   }
   p {
@@ -222,11 +262,38 @@ const Skills = styled.div`
   .title-span {
     font-size: 3.5rem;
   }
+  .all-skills {
+    opacity: 0;
+  }
   h2 {
     font-size: 3rem;
   }
   span {
     font-size: 2rem;
+  }
+  @media (max-width: 1200px) {
+    left: 0;
+    width: 100%;
+    .hidden {
+      opacity: 0;
+    }
+    .visible {
+      opacity: 0;
+      transition: none;
+    }
+    p {
+      min-width: 100%;
+      padding: 2rem 0rem;
+      margin: 0;
+    }
+    .skill-wrapper {
+      padding-top: 0;
+      flex-basis: 1rem;
+    }
+    .all-skills {
+      transform: scale(1);
+      opacity: 1;
+    }
   }
 `;
 const Skill = styled.div`

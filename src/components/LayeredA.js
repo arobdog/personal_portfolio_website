@@ -86,7 +86,6 @@ const LayeredA = ({ skillsSelection, setSkillsSelection }) => {
           transition: "x, 90ms ease-out",
           transition: "y, 90ms ease-out",
         }}
-        transform="scale: 1.5"
         src={A3}
         alt="Third letter A layer"
       />

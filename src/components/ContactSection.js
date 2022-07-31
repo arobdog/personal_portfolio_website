@@ -74,25 +74,25 @@ const ContactSection = () => {
                 </button>
               </div>
               <div className="iconLinks">
-                <a href="https://www.linkedin.com/in/arobs/" target="_blank">
-                  <FontAwesomeIcon icon={faLinkedin} size="3x" />
-                </a>
                 <a href="https://github.com/alibahbah" target="_blank">
                   <FontAwesomeIcon icon={faGithub} size="3x" />
+                </a>
+                <a href="https://www.linkedin.com/in/arobs/" target="_blank">
+                  <FontAwesomeIcon icon={faLinkedin} size="3x" />
                 </a>
               </div>
             </div>
           </form>
         </ContactForm>
       </Contact>
-      <ConatactImage
+      <ContactImage
         variants={fade}
         ref={element}
         animate={controls}
         initial="hidden"
       >
         <img src={contactImage} alt="send a message" />
-      </ConatactImage>
+      </ContactImage>
     </div>
   );
 };
@@ -202,7 +202,7 @@ const ContactForm = styled(motion.div)`
   }
 `;
 
-const ConatactImage = styled(motion.div)`
+const ContactImage = styled(motion.div)`
   position: absolute;
   right: 22vh;
   top: 22vh;

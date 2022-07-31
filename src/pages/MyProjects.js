@@ -11,7 +11,6 @@ import ScrollTop from "../components/ScrollTop";
 
 const MyProjects = () => {
   const [element, controls] = useScroll();
-  const [element2, controls2] = useScroll();
   return (
     <Projects
       variants={pageAnimation}
@@ -50,7 +49,7 @@ const Projects = styled(motion.div)`
   min-height: 100vh;
   overflow: hidden;
   padding: 5rem 10rem;
-  @media (max-width: 1300px) {
+  @media (max-width: 1200px) {
     padding: 2rem 2rem;
   }
   h2 {

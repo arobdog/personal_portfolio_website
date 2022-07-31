@@ -7,7 +7,6 @@ import { Section, Description, Image, Hide } from "../styles";
 //Framer Motion
 import { motion } from "framer-motion";
 import { titleAnim, fade, photoAnim, buttonAnim } from "../animation";
-import Wave from "./Wave";
 import styled from "styled-components";
 //React Router
 import { Link } from "react-router-dom";
