@@ -31,9 +31,8 @@ const ContactSection = () => {
         <ContactForm>
           <form
             name="contact"
-            action="/contact"
-            method="post"
-            data-netlify="true"
+            method="POST"
+            netlify
             onSubmit="submit"
             data-netlify-honeypot="bot-field"
           >
