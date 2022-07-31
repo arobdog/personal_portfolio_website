@@ -51,11 +51,13 @@ export const Description = styled.div`
   z-index: 2;
   p {
     padding: 1.5rem 0rem;
+    padding-top: 3rem;
+    padding-bottom: 0rem;
     width: 95%;
   }
   h2 {
     font-weight: lighter;
-    padding-bottom: 1rem;
+    padding-bottom: 1.5rem;
   }
   .skills-title {
     padding: 1rem 0rem;
