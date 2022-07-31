@@ -57,9 +57,9 @@ const GlobalStyle = createGlobalStyle`
     }
     h2{
             font-weight: lighter;
-            font-size: 4rem;
+            font-size: 3.8rem;
             @media screen and (max-height: 850px){
-                font-size: 4.5rem;
+                font-size: 3.8rem;
             }
             @media screen and (max-height: 700px){
                 font-size: 3.5rem;

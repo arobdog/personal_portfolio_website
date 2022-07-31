@@ -109,25 +109,17 @@ const Contact = styled(Section)`
     font-weight: lighter;
   }
   // Media Queries
-  @media screen and (max-width: 2800px) {
-  }
-  @media screen and (max-width: 2400px) {
-  }
-  @media screen and (max-width: 2000px) {
-  }
-  @media screen and (max-width: 1600px) {
-  }
   @media screen and (max-width: 1200px) {
-    display: flex;
-    padding: 2rem 2rem;
-    text-align: center;
-    justify-content: center;
+    min-height: auto;
+    padding: 4rem 4rem;
+    margin: auto;
     width: 100vw;
-    min-height: 50rem;
   }
-  @media screen and (max-width: 800px) {
-  }
-  @media screen and (max-width: 500px) {
+  @media screen and (max-height: 850px) {
+    padding-top: 1.5rem;
+    h2 {
+      padding: 0;
+    }
   }
 `;
 
@@ -152,6 +144,13 @@ const ContactForm = styled(motion.div)`
       flex-wrap: nowrap;
       align-items: center;
       justify-content: space-between;
+      @media screen and (max-width: 350px) {
+        margin: auto;
+        min-width: 10rem;
+        svg {
+          transform: scale(0.8);
+        }
+      }
     }
     .iconLinks {
       a {
@@ -174,11 +173,11 @@ const ContactForm = styled(motion.div)`
   .Info {
     display: flex;
     flex-direction: column;
-    min-width: 22.5rem;
+    min-width: 10rem;
     width: 100%;
   }
   .Info input {
-    min-height: 3rem;
+    min-height: 1rem;
     height: 5vh;
     margin: 1rem 0rem;
     box-shadow: 0.5rem 0.5rem 0.5rem #1f1f1f;
@@ -186,14 +185,14 @@ const ContactForm = styled(motion.div)`
   .Message {
     display: block;
     width: 100%;
-    min-width: 22.5rem;
+    min-width: 10rem;
   }
   .Message textarea {
     background: #323232;
     color: white;
     border: none;
-    min-height: 13rem;
-    height: 30vh;
+    min-height: 3rem;
+    height: 25vh;
     margin: 2rem 0rem;
     width: 100%;
     font: normal 1.5rem Inter, sans-serif;
@@ -204,12 +203,50 @@ const ContactForm = styled(motion.div)`
 
 const ContactImage = styled(motion.div)`
   position: absolute;
-  right: 22vh;
-  top: 22vh;
+  right: 20vh;
+  top: 25vh;
   z-index: -1;
   img {
     opacity: 1;
-    transform: scale(1.1);
+    transform: scale(1.2);
+  }
+  // Media Queries
+  @media screen and (max-width: 2800px) {
+    right: 20vh;
+    top: 30vh;
+    img {
+      transform: scale(1.5);
+    }
+  }
+  @media screen and (max-width: 2400px) {
+    right: 17vh;
+    top: 30vh;
+    img {
+      transform: scale(1.4);
+    }
+  }
+  @media screen and (max-width: 2000px) {
+    right: 12vh;
+    top: 28vh;
+    img {
+      transform: scale(1.2);
+    }
+  }
+  @media screen and (max-width: 1600px) {
+    right: 6vh;
+    top: 24vh;
+    img {
+      transform: scale(1);
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    right: 20vh;
+    top: 25vh;
+    overflow: hidden;
+    img {
+      opacity: 0;
+      transform: scale(1.2);
+    }
   }
 `;
 
