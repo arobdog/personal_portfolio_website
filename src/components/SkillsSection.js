@@ -1,23 +1,16 @@
 import React from "react";
 //Import Icons
-import typescriptIcon from "../img/skills-icons/typescript.svg";
-import nodejsIcon from "../img/skills-icons/nodejs-icon.svg";
-import javascriptIcon from "../img/skills-icons/javascript-icon-primary.svg";
-import reactIcon from "../img/skills-icons/react_icon.svg";
-import pythonIcon from "../img/skills-icons/python_icon.svg";
-import cIcon from "../img/skills-icons/C.svg";
-import gitIcon from "../img/skills-icons/git_icon.svg";
-import vsCodeIcon from "../img/skills-icons/visual_studio_code_icon.svg";
-import reduxIcon from "../img/skills-icons/redux-logo.svg";
-import jiraIcon from "../img/skills-icons/jira-icon.svg";
-import bitbucketIcon from "../img/skills-icons/bitbucket-icon.svg";
-
-//Font Awesome Icons
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faChevronLeft,
-  faChevronRight,
-} from "@fortawesome/free-solid-svg-icons";
+import typescript from "../img/skills-icons/typescript.svg";
+import nodejs from "../img/skills-icons/nodejs.svg";
+import javascript from "../img/skills-icons/javascript.svg";
+import react from "../img/skills-icons/react.svg";
+import python from "../img/skills-icons/python.svg";
+import c from "../img/skills-icons/C.svg";
+import git from "../img/skills-icons/git.svg";
+import vsCode from "../img/skills-icons/visual-studio-code.svg";
+import redux from "../img/skills-icons/redux.svg";
+import jira from "../img/skills-icons/jira.svg";
+import bitbucket from "../img/skills-icons/bitbucket.svg";
 
 //Styles
 import styled from "styled-components";
@@ -59,19 +52,19 @@ const SkillsSection = ({ skillsSelection, setSkillsSelection }) => {
                   </p>
                   <Skill>
                     <div className="icon">
-                      <img src={javascriptIcon} alt="JavaScript" />
+                      <img src={javascript} alt="JavaScript" />
                     </div>
                     <p>JavaScript</p>
                   </Skill>
                   <Skill>
                     <div className="icon">
-                      <img src={reactIcon} alt="React" />
+                      <img src={react} alt="React" />
                     </div>
                     <p>React</p>
                   </Skill>
                   <Skill>
                     <div className="icon">
-                      <img src={reduxIcon} alt="Redux" />
+                      <img src={redux} alt="Redux" />
                     </div>
                     <p>Redux</p>
                   </Skill>
@@ -88,13 +81,13 @@ const SkillsSection = ({ skillsSelection, setSkillsSelection }) => {
                   </p>
                   <Skill>
                     <div className="icon">
-                      <img src={pythonIcon} alt="Python" />
+                      <img src={python} alt="Python" />
                     </div>
                     <p>Python</p>
                   </Skill>
                   <Skill>
                     <div className="icon">
-                      <img src={cIcon} alt="C" />
+                      <img src={c} alt="C" />
                     </div>
                     <p>C</p>
                   </Skill>
@@ -103,25 +96,25 @@ const SkillsSection = ({ skillsSelection, setSkillsSelection }) => {
                   </p>
                   <Skill>
                     <div className="icon">
-                      <img src={vsCodeIcon} alt="VS Code" />
+                      <img src={vsCode} alt="VS Code" />
                     </div>
                     <p>VS Code</p>
                   </Skill>
                   <Skill>
                     <div className="icon">
-                      <img src={gitIcon} alt="Git" />
+                      <img src={git} alt="Git" />
                     </div>
                     <p>Git</p>
                   </Skill>
                   <Skill>
                     <div className="icon">
-                      <img src={bitbucketIcon} alt="Bitbucket" />
+                      <img src={bitbucket} alt="Bitbucket" />
                     </div>
                     <p>Bitbucket</p>
                   </Skill>
                   <Skill>
                     <div className="icon">
-                      <img src={jiraIcon} alt="Jira" />
+                      <img src={jira} alt="Jira" />
                     </div>
                     <p>Jira</p>
                   </Skill>
@@ -138,13 +131,13 @@ const SkillsSection = ({ skillsSelection, setSkillsSelection }) => {
                   </p>
                   <Skill>
                     <div className="icon">
-                      <img src={typescriptIcon} alt="TypeScript" />
+                      <img src={typescript} alt="TypeScript" />
                     </div>
                     <p>TypeScript</p>
                   </Skill>
                   <Skill>
                     <div className="icon">
-                      <img src={nodejsIcon} alt="Node.js" />
+                      <img src={nodejs} alt="Node.js" />
                     </div>
                     <p>Node.js</p>
                   </Skill>
