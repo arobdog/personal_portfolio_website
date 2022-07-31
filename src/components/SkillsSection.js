@@ -1,5 +1,6 @@
 import React from "react";
 //Import Icons
+import typescriptIcon from "../img/skills-icons/typescript.svg";
 import nodejsIcon from "../img/skills-icons/nodejs-icon.svg";
 import javascriptIcon from "../img/skills-icons/javascript-icon-primary.svg";
 import reactIcon from "../img/skills-icons/react_icon.svg";
@@ -7,8 +8,6 @@ import pythonIcon from "../img/skills-icons/python_icon.svg";
 import cIcon from "../img/skills-icons/C.svg";
 import gitIcon from "../img/skills-icons/git_icon.svg";
 import vsCodeIcon from "../img/skills-icons/visual_studio_code_icon.svg";
-import cssIcon from "../img/skills-icons/CSS3.svg";
-import htmlIcon from "../img/skills-icons/HTML5.svg";
 import reduxIcon from "../img/skills-icons/redux-logo.svg";
 import jiraIcon from "../img/skills-icons/jira-icon.svg";
 import bitbucketIcon from "../img/skills-icons/bitbucket-icon.svg";
@@ -45,8 +44,8 @@ const SkillsSection = ({ skillsSelection, setSkillsSelection }) => {
             <Skills>
               <div className={`${skillsSelection[0]}`}>
                 <h2>
-                  Please <span>select a layer of the letter A</span> to see my
-                  skills.
+                  <span className="title-span">Hover over the A</span> to see my
+                  skills!
                 </h2>
               </div>
             </Skills>
@@ -55,10 +54,12 @@ const SkillsSection = ({ skillsSelection, setSkillsSelection }) => {
             <Skills id="frontend-skills">
               <div className={`${skillsSelection[1]}`}>
                 <div className="skill-wrapper">
-                  <p>Frontend</p>
+                  <p>
+                    <span>Frontend</span>
+                  </p>
                   <Skill>
                     <div className="icon">
-                      <img src={javascriptIcon} alt="" />
+                      <img src={javascriptIcon} alt="JavaScript" />
                     </div>
                     <p>JavaScript</p>
                   </Skill>
@@ -74,18 +75,6 @@ const SkillsSection = ({ skillsSelection, setSkillsSelection }) => {
                     </div>
                     <p>Redux</p>
                   </Skill>
-                  <Skill>
-                    <div className="icon">
-                      <img src={htmlIcon} alt="HTML5" />
-                    </div>
-                    <p>HTML5</p>
-                  </Skill>
-                  <Skill>
-                    <div className="icon">
-                      <img src={cssIcon} alt="CSS3" />
-                    </div>
-                    <p>CSS3</p>
-                  </Skill>
                 </div>
               </div>
             </Skills>
@@ -94,20 +83,24 @@ const SkillsSection = ({ skillsSelection, setSkillsSelection }) => {
             <Skills id="technologies-skills">
               <div className={`${skillsSelection[2]}`}>
                 <div className="skill-wrapper">
-                  <p>Other Languages</p>
+                  <p>
+                    <span>Other Languages</span>
+                  </p>
                   <Skill>
                     <div className="icon">
-                      <img src={pythonIcon} alt="" />
+                      <img src={pythonIcon} alt="Python" />
                     </div>
                     <p>Python</p>
                   </Skill>
                   <Skill>
                     <div className="icon">
-                      <img src={cIcon} alt="" />
+                      <img src={cIcon} alt="C" />
                     </div>
                     <p>C</p>
                   </Skill>
-                  <p>Tools</p>
+                  <p>
+                    <span>Tools</span>
+                  </p>
                   <Skill>
                     <div className="icon">
                       <img src={vsCodeIcon} alt="VS Code" />
@@ -140,7 +133,15 @@ const SkillsSection = ({ skillsSelection, setSkillsSelection }) => {
             <Skills id="backend-skills">
               <div className={`${skillsSelection[3]}`}>
                 <div className="skill-wrapper">
-                  <p>Backend</p>
+                  <p>
+                    <span>Backend</span>
+                  </p>
+                  <Skill>
+                    <div className="icon">
+                      <img src={typescriptIcon} alt="TypeScript" />
+                    </div>
+                    <p>TypeScript</p>
+                  </Skill>
                   <Skill>
                     <div className="icon">
                       <img src={nodejsIcon} alt="Node.js" />
@@ -163,7 +164,7 @@ const SkillsSummary = styled(Section)`
   position: relative;
   display: block;
   h2 {
-    padding-bottom: 4rem;
+    padding-bottom: 2rem;
     padding-top: 5rem;
     top: 0;
   }
@@ -204,8 +205,8 @@ const Skills = styled.div`
     text-align: center;
     font-size: 1.8rem;
     width: 100%;
-    padding: 1.2rem;
-    padding-top: 2rem;
+    padding: 0.8rem 1rem;
+    padding-top: 0rem;
   }
   .hidden {
     opacity: 0;
@@ -225,11 +226,14 @@ const Skills = styled.div`
     align-items: center;
     justify-content: center;
   }
+  .title-span {
+    font-size: 3.5rem;
+  }
   h2 {
     font-size: 3rem;
   }
   span {
-    font-size: 3.5rem;
+    font-size: 2rem;
   }
 `;
 const Skill = styled.div`

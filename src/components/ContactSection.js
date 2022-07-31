@@ -108,6 +108,27 @@ const Contact = styled(Section)`
     padding-bottom: 2rem;
     font-weight: lighter;
   }
+  // Media Queries
+  @media screen and (max-width: 2800px) {
+  }
+  @media screen and (max-width: 2400px) {
+  }
+  @media screen and (max-width: 2000px) {
+  }
+  @media screen and (max-width: 1600px) {
+  }
+  @media screen and (max-width: 1200px) {
+    display: flex;
+    padding: 2rem 2rem;
+    text-align: center;
+    justify-content: center;
+    width: 100vw;
+    min-height: 50rem;
+  }
+  @media screen and (max-width: 800px) {
+  }
+  @media screen and (max-width: 500px) {
+  }
 `;
 
 const ContactForm = styled(motion.div)`

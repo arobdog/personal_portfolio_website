@@ -6,6 +6,7 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        max-width: 100%;
     }
     html{
         @media screen and (max-width: 2800px) {
@@ -32,11 +33,11 @@ const GlobalStyle = createGlobalStyle`
         
     }
     body{
+        overflow-y: scroll;
         overflow-x: hidden;
         position: relative;
         background: #212121;
         font-family: "Inter", sans-serif;
-        
     }
     button{
         font-weight: bold;

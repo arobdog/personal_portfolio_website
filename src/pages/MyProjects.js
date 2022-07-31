@@ -25,7 +25,7 @@ const MyProjects = () => {
         <motion.div variants={lineAnim} className="line"></motion.div>
         <Link to="/work">
           <Hide>
-            <motion.img variants={photoAnim} alt="athlete" />
+            <motion.img variants={photoAnim} alt="Python Report Generator" />
           </Hide>
         </Link>
       </Project>
@@ -38,7 +38,7 @@ const MyProjects = () => {
         <motion.h2>Data Glove</motion.h2>
         <motion.div variantss={lineAnim} className="line"></motion.div>
         <Link to="/work/the-racer">
-          <motion.img alt="theracer" />
+          <motion.img alt="Data Glove" />
         </Link>
       </Project>
       <ScrollTop />

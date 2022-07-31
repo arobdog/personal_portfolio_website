@@ -75,7 +75,7 @@ const StyledNav = styled.nav`
       padding: 1rem;
     }
     ul {
-      padding: 2rem;
+      padding: 0.5rem;
       justify-content: space-around;
       width: 100%;
       li {
