@@ -29,7 +29,7 @@ const ContactSection = () => {
           </h2>
         </div>
         <ContactForm>
-          <form name="contact" method="POST">
+          <form name="contact" method="post">
             <input type="hidden" name="form-name" value="contact" />
             <div className="Info">
               <input
