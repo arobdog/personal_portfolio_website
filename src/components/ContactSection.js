@@ -84,6 +84,8 @@ const ContactSection = () => {
 };
 
 const Contact = styled(Section)`
+  overflow-y: hidden;
+  position: fixed;
   z-index: 2;
   display: block;
   box-sizing: border-box;
@@ -104,7 +106,7 @@ const Contact = styled(Section)`
   @media screen and (max-height: 850px) {
     padding-top: 1.5rem;
     h2 {
-      padding: 0;
+      padding: 0.75rem;
     }
   }
 `;

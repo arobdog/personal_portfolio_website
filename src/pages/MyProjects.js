@@ -8,6 +8,14 @@ import { motion } from "framer-motion";
 import { pageAnimation, fade, photoAnim, lineAnim } from "../animation";
 import { useScroll } from "../components/useScroll";
 import ScrollTop from "../components/ScrollTop";
+//FontAwesome Icons
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import {
+  faArrowUpRightFromSquare,
+  faChevronLeft,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
 
 const MyProjects = () => {
   const [element, controls] = useScroll();
@@ -20,13 +28,28 @@ const MyProjects = () => {
       style={{ background: "#212121" }}
     >
       <Project>
-        <motion.h2 variants={fade}>Python Report Generator</motion.h2>
+        <motion.div className="heading" variants={fade}>
+          <motion.h2>Ember Game Search</motion.h2>
+          <motion.div className="icons">
+            <motion.a href="https://github.com/alibahbah/ember" target="_blank">
+              <FontAwesomeIcon icon={faGithub} size="3x" />
+            </motion.a>
+            <motion.a href="https://ember-games.netlify.app" target="_blank">
+              <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="3x" />
+            </motion.a>
+          </motion.div>
+        </motion.div>
         <motion.div variants={lineAnim} className="line"></motion.div>
-        <Link to="/work">
-          <Hide>
-            <motion.img variants={photoAnim} alt="Python Report Generator" />
-          </Hide>
-        </Link>
+        <motion.div className="content">
+          <motion.div className="description">
+            <p>Hello there</p>
+          </motion.div>
+          <motion.div className="image-stack">
+            <Hide>
+              <motion.img variants={photoAnim} alt="Ember Game Search" />
+            </Hide>
+          </motion.div>
+        </motion.div>
       </Project>
       <Project
         ref={element}
@@ -34,11 +57,37 @@ const MyProjects = () => {
         animate={controls}
         initial="hidden"
       >
-        <motion.h2>Data Glove</motion.h2>
-        <motion.div variantss={lineAnim} className="line"></motion.div>
-        <Link to="/work/the-racer">
-          <motion.img alt="Data Glove" />
-        </Link>
+        <motion.div className="heading" variants={fade}>
+          <motion.h2>F&P Data Analysis Tool</motion.h2>
+          <motion.div className="icons">
+            <motion.a href="" target="_blank">
+              <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="3x" />
+            </motion.a>
+          </motion.div>
+        </motion.div>
+        <motion.div variants={lineAnim} className="line"></motion.div>
+        <motion.div className="content">
+          <motion.div className="description">
+            <p>Hello there</p>
+          </motion.div>
+          <motion.div className="image-stack">
+            <Hide>
+              <FontAwesomeIcon
+                style={{ cursor: "pointer", padding: "0rem 1rem" }}
+                icon={faChevronLeft}
+                size="4x"
+              />
+              <ProjectImages>
+                <motion.img alt="Python Analysis Tool" />
+              </ProjectImages>
+              <FontAwesomeIcon
+                style={{ cursor: "pointer", padding: "0rem 1rem" }}
+                icon={faChevronRight}
+                size="4x"
+              />
+            </Hide>
+          </motion.div>
+        </motion.div>
       </Project>
       <ScrollTop />
     </Projects>
@@ -59,10 +108,43 @@ const Projects = styled(motion.div)`
 `;
 const Project = styled(motion.div)`
   padding-bottom: 10rem;
+  .heading {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+  .icons {
+    svg {
+      margin: 0.5rem;
+      padding: 0.5rem;
+    }
+  }
+  a {
+    text-decoration: none;
+    color: white;
+  }
   .line {
     height: 0.5rem;
     background: #14ffec;
     margin-bottom: 3rem;
+  }
+  .content {
+    display: flex;
+    width: 100%;
+    height: 60vh;
+    p {
+      padding: 0;
+    }
+    .description {
+      width: 50%;
+    }
+    .image-stack {
+      color: white;
+      display: inline;
+      margin: auto;
+      width: 50%;
+    }
   }
   img {
     width: 100%;
@@ -70,6 +152,15 @@ const Project = styled(motion.div)`
     object-fit: cover;
   }
 `;
+
+const ProjectImages = styled(motion.div)`
+  z-index: -1;
+  img {
+    position: absolute;
+    width: 100%;
+  }
+`;
+
 const Hide = styled.div`
   overflow: hidden;
 `;
