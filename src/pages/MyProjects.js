@@ -66,7 +66,7 @@ const MyProjects = () => {
           <motion.div className="description">
             <p>Hello there</p>
           </motion.div>
-          <motion.div className="image-stack">
+          <motion.div className="image-gallery" variants={fade}>
             <FontAwesomeIcon
               onClick={() => {
                 if (imageCount1 == 0) {
@@ -79,13 +79,10 @@ const MyProjects = () => {
               icon={faChevronLeft}
               size="4x"
             />
-            <ProjectImages>
-              <motion.img
-                variants={fade}
-                src={emberGamesImages[imageCount1]}
-                alt="Ember Games Search Images"
-              />
-            </ProjectImages>
+            <motion.img
+              src={emberGamesImages[imageCount1]}
+              alt="Ember Games Search Images"
+            />
             <FontAwesomeIcon
               onClick={() => {
                 setImageCount1((imageCount1 + 1) % emberGamesImages.length);
@@ -120,7 +117,7 @@ const MyProjects = () => {
           <motion.div className="description">
             <p>Hello there</p>
           </motion.div>
-          <motion.div className="image-stack">
+          <motion.div className="image-gallery" variants={fade}>
             <FontAwesomeIcon
               onClick={() => {
                 if (imageCount2 == 0) {
@@ -133,13 +130,10 @@ const MyProjects = () => {
               icon={faChevronLeft}
               size="4x"
             />
-            <ProjectImages>
-              <motion.img
-                variants={fade}
-                src={dataAnalysisImages[imageCount2]}
-                alt="Python Analysis Tool Images"
-              />
-            </ProjectImages>
+            <motion.img
+              src={dataAnalysisImages[imageCount2]}
+              alt="Python Analysis Tool Images"
+            />
             <FontAwesomeIcon
               onClick={() => {
                 setImageCount2((imageCount2 + 1) % dataAnalysisImages.length);
@@ -195,34 +189,28 @@ const Project = styled(motion.div)`
     display: flex;
     width: 100%;
     height: 60vh;
-    /* overflow: hidden; */
+    overflow: hidden;
     p {
       padding: 0;
     }
     .description {
       width: 50%;
     }
-    .image-stack {
-      color: white;
-      display: inline;
+    .image-gallery {
+      color: #626262;
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
       margin: auto;
       width: 50%;
     }
   }
   img {
-  }
-`;
-
-const ProjectImages = styled(motion.div)`
-  img {
     width: 100%;
     border-radius: 0.7rem;
     box-shadow: 0.5rem 0.5rem 0.5rem #1f1f1f;
   }
-`;
-
-const Hide = styled.div`
-  /* overflow: hidden; */
 `;
 
 export default MyProjects;
