@@ -1,8 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
-//Images
-
 //Animations
 import { motion } from "framer-motion";
 import { pageAnimation, fade, photoAnim, lineAnim } from "../animation";
@@ -17,8 +14,33 @@ import {
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 
+// Import Project Images
+// F&P Data Analysis Tool
+import mainScreen from "../img/project_images/fp_data_analysis/MainScreen.PNG";
+import selectionScreen from "../img/project_images/fp_data_analysis/SelectionScreen.PNG";
+import cycleSelection from "../img/project_images/fp_data_analysis/CycleSelection.PNG";
+import reportConfirmation from "../img/project_images/fp_data_analysis/ReportConfirmation.PNG";
+
+// Ember Game Search
+import mainPage from "../img/project_images/ember_game_search/MainPage.PNG";
+import searchResults from "../img/project_images/ember_game_search/SearchResults.PNG";
+import cardDetail1 from "../img/project_images/ember_game_search/CardDetail1.PNG";
+import cardDetail2 from "../img/project_images/ember_game_search/CardDetail2.PNG";
+
 const MyProjects = () => {
   const [element, controls] = useScroll();
+  //Project Images
+  const emberGamesImages = [mainPage, searchResults, cardDetail1, cardDetail2];
+  const dataAnalysisImages = [
+    mainScreen,
+    selectionScreen,
+    cycleSelection,
+    reportConfirmation,
+  ];
+  // Page counters for image gallery
+  let imageCount1 = 0;
+  let imageCount2 = 0;
+
   return (
     <Projects
       variants={pageAnimation}
@@ -46,7 +68,24 @@ const MyProjects = () => {
           </motion.div>
           <motion.div className="image-stack">
             <Hide>
-              <motion.img variants={photoAnim} alt="Ember Game Search" />
+              <FontAwesomeIcon
+                style={{ cursor: "pointer", padding: "0rem 1rem" }}
+                icon={faChevronLeft}
+                size="4x"
+              />
+              <ProjectImages>
+                <motion.img
+                  variants={photoAnim}
+                  src={emberGamesImages[imageCount1]}
+                  alt="Ember Games Search Images"
+                />
+              </ProjectImages>
+              <FontAwesomeIcon
+                onClick={(imageCount1 += 1)}
+                style={{ cursor: "pointer", padding: "0rem 1rem" }}
+                icon={faChevronRight}
+                size="4x"
+              />
             </Hide>
           </motion.div>
         </motion.div>
@@ -60,7 +99,10 @@ const MyProjects = () => {
         <motion.div className="heading" variants={fade}>
           <motion.h2>F&P Data Analysis Tool</motion.h2>
           <motion.div className="icons">
-            <motion.a href="" target="_blank">
+            <motion.a
+              href="/project_resources/fp_data_analysis/Sample_Report.html"
+              target="_blank"
+            >
               <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="3x" />
             </motion.a>
           </motion.div>
@@ -78,7 +120,11 @@ const MyProjects = () => {
                 size="4x"
               />
               <ProjectImages>
-                <motion.img alt="Python Analysis Tool" />
+                <motion.img
+                  variants={photoAnim}
+                  src={dataAnalysisImages[imageCount2]}
+                  alt="Python Analysis Tool Images"
+                />
               </ProjectImages>
               <FontAwesomeIcon
                 style={{ cursor: "pointer", padding: "0rem 1rem" }}
@@ -133,6 +179,7 @@ const Project = styled(motion.div)`
     display: flex;
     width: 100%;
     height: 60vh;
+    overflow: hidden;
     p {
       padding: 0;
     }
@@ -147,16 +194,11 @@ const Project = styled(motion.div)`
     }
   }
   img {
-    width: 100%;
-    height: 70vh;
-    object-fit: cover;
   }
 `;
 
 const ProjectImages = styled(motion.div)`
-  z-index: -1;
   img {
-    position: absolute;
     width: 100%;
   }
 `;

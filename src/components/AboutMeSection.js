@@ -25,8 +25,9 @@ const AboutMeSection = () => {
           <span>JavaScript</span>, <span>React</span> and <span>Node.js</span>.
         </p>
         <p>
-          Most of my time outside of work is spent working on projects because
-          project based learning is my favourite way to learn.
+          My favourite way to learn is through projects and this portfolio
+          allows me to show you. I am most fulfilled when the results of my work
+          improve people's lives.
         </p>
         <p>
           Apart from coding I enjoy bouldering, learning foreign languages and
