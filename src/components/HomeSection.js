@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import A1 from "../img/A-layer1.svg";
 import A2 from "../img/A-layer1.svg";
 import A3 from "../img/A-layer1.svg";
 import LayeredA from "./LayeredA";
-import { Section, Description, Image, Hide } from "../styles";
+import { Section, Description, Hide } from "../styles";
 //Framer Motion
 import { motion } from "framer-motion";
-import { titleAnim, fade, photoAnim, buttonAnim } from "../animation";
+import { titleAnim, fade } from "../animation";
 import styled from "styled-components";
 //React Router
 import { Link } from "react-router-dom";

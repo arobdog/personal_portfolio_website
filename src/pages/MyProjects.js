@@ -1,8 +1,8 @@
-import React from "react";
+import { React, useState } from "react";
 import styled from "styled-components";
 //Animations
 import { motion } from "framer-motion";
-import { pageAnimation, fade, photoAnim, lineAnim } from "../animation";
+import { pageAnimation, fade, lineAnim } from "../animation";
 import { useScroll } from "../components/useScroll";
 import ScrollTop from "../components/ScrollTop";
 //FontAwesome Icons
@@ -37,9 +37,9 @@ const MyProjects = () => {
     cycleSelection,
     reportConfirmation,
   ];
-  // Page counters for image gallery
-  let imageCount1 = 0;
-  let imageCount2 = 0;
+  // Counters for image gallery
+  const [imageCount1, setImageCount1] = useState(0);
+  const [imageCount2, setImageCount2] = useState(0);
 
   return (
     <Projects
@@ -67,26 +67,34 @@ const MyProjects = () => {
             <p>Hello there</p>
           </motion.div>
           <motion.div className="image-stack">
-            <Hide>
-              <FontAwesomeIcon
-                style={{ cursor: "pointer", padding: "0rem 1rem" }}
-                icon={faChevronLeft}
-                size="4x"
+            <FontAwesomeIcon
+              onClick={() => {
+                if (imageCount1 == 0) {
+                  setImageCount1(emberGamesImages.length - 1);
+                } else {
+                  setImageCount1((imageCount1 - 1) % emberGamesImages.length);
+                }
+              }}
+              style={{ cursor: "pointer", padding: "0rem 1rem" }}
+              icon={faChevronLeft}
+              size="4x"
+            />
+            <ProjectImages>
+              <motion.img
+                variants={fade}
+                src={emberGamesImages[imageCount1]}
+                alt="Ember Games Search Images"
               />
-              <ProjectImages>
-                <motion.img
-                  variants={photoAnim}
-                  src={emberGamesImages[imageCount1]}
-                  alt="Ember Games Search Images"
-                />
-              </ProjectImages>
-              <FontAwesomeIcon
-                onClick={(imageCount1 += 1)}
-                style={{ cursor: "pointer", padding: "0rem 1rem" }}
-                icon={faChevronRight}
-                size="4x"
-              />
-            </Hide>
+            </ProjectImages>
+            <FontAwesomeIcon
+              onClick={() => {
+                setImageCount1((imageCount1 + 1) % emberGamesImages.length);
+              }}
+              on
+              style={{ cursor: "pointer", padding: "0rem 1rem" }}
+              icon={faChevronRight}
+              size="4x"
+            />
           </motion.div>
         </motion.div>
       </Project>
@@ -113,25 +121,33 @@ const MyProjects = () => {
             <p>Hello there</p>
           </motion.div>
           <motion.div className="image-stack">
-            <Hide>
-              <FontAwesomeIcon
-                style={{ cursor: "pointer", padding: "0rem 1rem" }}
-                icon={faChevronLeft}
-                size="4x"
+            <FontAwesomeIcon
+              onClick={() => {
+                if (imageCount2 == 0) {
+                  setImageCount2(dataAnalysisImages.length - 1);
+                } else {
+                  setImageCount2((imageCount2 - 1) % dataAnalysisImages.length);
+                }
+              }}
+              style={{ cursor: "pointer", padding: "0rem 1rem" }}
+              icon={faChevronLeft}
+              size="4x"
+            />
+            <ProjectImages>
+              <motion.img
+                variants={fade}
+                src={dataAnalysisImages[imageCount2]}
+                alt="Python Analysis Tool Images"
               />
-              <ProjectImages>
-                <motion.img
-                  variants={photoAnim}
-                  src={dataAnalysisImages[imageCount2]}
-                  alt="Python Analysis Tool Images"
-                />
-              </ProjectImages>
-              <FontAwesomeIcon
-                style={{ cursor: "pointer", padding: "0rem 1rem" }}
-                icon={faChevronRight}
-                size="4x"
-              />
-            </Hide>
+            </ProjectImages>
+            <FontAwesomeIcon
+              onClick={() => {
+                setImageCount2((imageCount2 + 1) % dataAnalysisImages.length);
+              }}
+              style={{ cursor: "pointer", padding: "0rem 1rem" }}
+              icon={faChevronRight}
+              size="4x"
+            />
           </motion.div>
         </motion.div>
       </Project>
@@ -142,7 +158,7 @@ const MyProjects = () => {
 
 const Projects = styled(motion.div)`
   min-height: 100vh;
-  overflow: hidden;
+  /* overflow: hidden; */
   padding: 5rem 10rem;
   @media (max-width: 1200px) {
     padding: 2rem 2rem;
@@ -153,7 +169,7 @@ const Projects = styled(motion.div)`
   }
 `;
 const Project = styled(motion.div)`
-  padding-bottom: 10rem;
+  padding-bottom: 5rem;
   .heading {
     width: 100%;
     display: inline-flex;
@@ -179,7 +195,7 @@ const Project = styled(motion.div)`
     display: flex;
     width: 100%;
     height: 60vh;
-    overflow: hidden;
+    /* overflow: hidden; */
     p {
       padding: 0;
     }
@@ -200,11 +216,13 @@ const Project = styled(motion.div)`
 const ProjectImages = styled(motion.div)`
   img {
     width: 100%;
+    border-radius: 0.7rem;
+    box-shadow: 0.5rem 0.5rem 0.5rem #1f1f1f;
   }
 `;
 
 const Hide = styled.div`
-  overflow: hidden;
+  /* overflow: hidden; */
 `;
 
 export default MyProjects;
