@@ -64,9 +64,22 @@ const MyProjects = () => {
         <motion.div variants={lineAnim} className="line"></motion.div>
         <motion.div className="content">
           <motion.div className="description">
-            <p>Hello there</p>
+            <motion.p variants={fade}>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora
+              debitis optio vitae minima dolore accusantium sequi non sint
+              cumque temporibus. Totam ipsa enim nulla provident iste,
+              voluptatibus veniam! <br />
+              <br />
+              Cum inventore tempora doloribus, veritatis incidunt temporibus
+              dolorem cupiditate ipsa quas distinctio consequatur veniam quos
+              iusto sed quisquam velit et aspernatur dolore! <br />
+              <br />
+              Cum inventore tempora doloribus, veritatis incidunt temporibus
+              dolorem cupiditate ipsa quas distinctio consequatur veniam quos
+              iusto sed quisquam velit et aspernatur dolore!
+            </motion.p>
           </motion.div>
-          <motion.div className="image-gallery" variants={fade}>
+          <motion.div className="image-gallery noSelect" variants={fade}>
             <FontAwesomeIcon
               onClick={() => {
                 if (imageCount1 == 0) {
@@ -96,10 +109,11 @@ const MyProjects = () => {
         </motion.div>
       </Project>
       <Project
+        style={{ paddingTop: "10rem" }}
         ref={element}
         variants={fade}
         animate={controls}
-        initial="hidden"
+        initial="hidden fp-data-analysis"
       >
         <motion.div className="heading" variants={fade}>
           <motion.h2>F&P Data Analysis Tool</motion.h2>
@@ -115,9 +129,22 @@ const MyProjects = () => {
         <motion.div variants={lineAnim} className="line"></motion.div>
         <motion.div className="content">
           <motion.div className="description">
-            <p>Hello there</p>
+            <motion.p variants={fade}>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora
+              debitis optio vitae minima dolore accusantium sequi non sint
+              cumque temporibus. Totam ipsa enim nulla provident iste,
+              voluptatibus veniam! <br />
+              <br />
+              Cum inventore tempora doloribus, veritatis incidunt temporibus
+              dolorem cupiditate ipsa quas distinctio consequatur veniam quos
+              iusto sed quisquam velit et aspernatur dolore! <br />
+              <br />
+              Cum inventore tempora doloribus, veritatis incidunt temporibus
+              dolorem cupiditate ipsa quas distinctio consequatur veniam quos
+              iusto sed quisquam velit et aspernatur dolore!
+            </motion.p>
           </motion.div>
-          <motion.div className="image-gallery" variants={fade}>
+          <motion.div className="image-gallery noSelect" variants={fade}>
             <FontAwesomeIcon
               onClick={() => {
                 if (imageCount2 == 0) {
@@ -163,7 +190,6 @@ const Projects = styled(motion.div)`
   }
 `;
 const Project = styled(motion.div)`
-  padding-bottom: 5rem;
   .heading {
     width: 100%;
     display: inline-flex;
@@ -191,25 +217,38 @@ const Project = styled(motion.div)`
     height: 60vh;
     overflow: hidden;
     p {
-      padding: 0;
+      padding: 1.3rem 0rem;
+      padding-right: 10rem;
+      font-size: 1.5rem;
     }
     .description {
       width: 50%;
     }
     .image-gallery {
       color: #626262;
-      display: flex;
+      display: inline-flex;
       flex-wrap: nowrap;
       justify-content: center;
       align-items: center;
-      margin: auto;
       width: 50%;
     }
   }
   img {
-    width: 100%;
+    width: 81%;
     border-radius: 0.7rem;
     box-shadow: 0.5rem 0.5rem 0.5rem #1f1f1f;
+  }
+  .noSelect {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .noSelect:focus {
+    outline: none !important;
   }
 `;
 
