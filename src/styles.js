@@ -20,6 +20,8 @@ export const Section = styled(motion.div)`
     justify-content: center;
     width: 100vw;
     min-height: 50rem;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
   }
   @media screen and (max-width: 800px) {
     height: 60rem;
@@ -35,13 +37,13 @@ export const Section = styled(motion.div)`
   @media screen and (max-height: 850px) {
     height: 60rem;
     @media (orientation: landscape) {
-      height: 30rem;
+      height: 45rem;
     }
   }
   @media screen and (max-height: 700px) {
-    height: 40rem;
+    height: 45rem;
     @media screen and (orientation: landscape) {
-      height: 30rem;
+      height: 45rem;
     }
   }
 `;
@@ -68,6 +70,19 @@ export const Description = styled.div`
   }
   .projects-button {
     margin-left: 2rem;
+  }
+  .link-buttons {
+    @media screen and (max-width: 500px) {
+      button {
+        text-decoration: none;
+        display: block;
+        margin: auto;
+        margin-top: 2rem;
+      }
+      .about-button {
+        margin-top: 1rem;
+      }
+    }
   }
   @media screen and (max-width: 1200px) {
     padding: 0;

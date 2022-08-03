@@ -84,7 +84,7 @@ const ContactSection = () => {
 };
 
 const Contact = styled(Section)`
-  overflow-y: hidden;
+  overflow: visible;
   position: fixed;
   z-index: 2;
   display: block;

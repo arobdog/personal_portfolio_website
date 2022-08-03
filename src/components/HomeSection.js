@@ -1,15 +1,9 @@
 import React from "react";
-import A1 from "../img/A-layer1.svg";
-import A2 from "../img/A-layer1.svg";
-import A3 from "../img/A-layer1.svg";
-import LayeredA from "./LayeredA";
 import { Section, Description, Hide } from "../styles";
 //Framer Motion
 import { motion } from "framer-motion";
 import { titleAnim, fade } from "../animation";
-import styled from "styled-components";
 //React Router
-import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
 const HomeSection = () => {
@@ -29,19 +23,23 @@ const HomeSection = () => {
             <motion.h2 variants={titleAnim}>Software Engineer</motion.h2>
           </Hide>
         </motion.div>
-        <HashLink smooth to="/#about">
-          <motion.button variants={fade}>About Me</motion.button>
-        </HashLink>
-        <HashLink smooth to="/#skills">
-          <motion.button className="skills-button" variants={fade}>
-            Skills
-          </motion.button>
-        </HashLink>
-        <HashLink to="/projects">
-          <motion.button className="projects-button" variants={fade}>
-            Projects
-          </motion.button>
-        </HashLink>
+        <motion.div className="link-buttons">
+          <HashLink smooth to="/#about">
+            <motion.button className="about-button" variants={fade}>
+              About Me
+            </motion.button>
+          </HashLink>
+          <HashLink smooth to="/#skills">
+            <motion.button className="skills-button" variants={fade}>
+              Skills
+            </motion.button>
+          </HashLink>
+          <HashLink to="/projects">
+            <motion.button className="projects-button" variants={fade}>
+              Projects
+            </motion.button>
+          </HashLink>
+        </motion.div>
       </Description>
     </Section>
   );

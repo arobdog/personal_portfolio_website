@@ -109,11 +109,11 @@ const MyProjects = () => {
         </motion.div>
       </Project>
       <Project
-        style={{ paddingTop: "10rem" }}
+        className="fp-data-analysis"
         ref={element}
         variants={fade}
         animate={controls}
-        initial="hidden fp-data-analysis"
+        initial="hidden"
       >
         <motion.div className="heading" variants={fade}>
           <motion.h2>F&P Data Analysis Tool</motion.h2>
@@ -187,6 +187,14 @@ const Projects = styled(motion.div)`
   h2 {
     padding: 1rem 0rem;
     color: white;
+  }
+  .fp-data-analysis {
+    padding-top: 10rem;
+  }
+  @media screen and (max-width: 1200px) {
+    .fp-data-analysis {
+      padding-top: 2.5rem;
+    }
   }
 `;
 const Project = styled(motion.div)`
