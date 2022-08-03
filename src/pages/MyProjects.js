@@ -217,7 +217,7 @@ const Project = styled(motion.div)`
     height: 60vh;
     overflow: hidden;
     p {
-      padding: 1.3rem 0rem;
+      padding: 1.5rem 0rem;
       padding-right: 10rem;
       font-size: 1.5rem;
     }
