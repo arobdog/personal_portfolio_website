@@ -74,7 +74,6 @@ export const Description = styled.div`
   .link-buttons {
     @media screen and (max-width: 500px) {
       button {
-        text-decoration: none;
         display: block;
         margin: auto;
         margin-top: 2rem;

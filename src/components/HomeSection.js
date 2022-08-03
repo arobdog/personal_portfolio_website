@@ -24,17 +24,17 @@ const HomeSection = () => {
           </Hide>
         </motion.div>
         <motion.div className="link-buttons">
-          <HashLink smooth to="/#about">
+          <HashLink style={{ textDecoration: "none" }} smooth to="/#about">
             <motion.button className="about-button" variants={fade}>
               About Me
             </motion.button>
           </HashLink>
-          <HashLink smooth to="/#skills">
+          <HashLink style={{ textDecoration: "none" }} smooth to="/#skills">
             <motion.button className="skills-button" variants={fade}>
               Skills
             </motion.button>
           </HashLink>
-          <HashLink to="/projects">
+          <HashLink style={{ textDecoration: "none" }} to="/projects">
             <motion.button className="projects-button" variants={fade}>
               Projects
             </motion.button>

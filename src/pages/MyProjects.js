@@ -109,7 +109,7 @@ const MyProjects = () => {
         </motion.div>
       </Project>
       <Project
-        className="fp-data-analysis"
+        className="succeeding-project"
         ref={element}
         variants={fade}
         animate={controls}
@@ -188,11 +188,11 @@ const Projects = styled(motion.div)`
     padding: 1rem 0rem;
     color: white;
   }
-  .fp-data-analysis {
+  .succeeding-project {
     padding-top: 10rem;
   }
   @media screen and (max-width: 1200px) {
-    .fp-data-analysis {
+    .succeeding-project {
       padding-top: 2.5rem;
     }
   }
