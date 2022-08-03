@@ -250,6 +250,52 @@ const Project = styled(motion.div)`
   .noSelect:focus {
     outline: none !important;
   }
+  @media screen and (max-width: 1200px) {
+    .heading {
+      width: 100%;
+      display: inline-flex;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+    }
+    .icons {
+      svg {
+        margin: 1rem 2rem;
+        margin-top: 2rem;
+        margin-right: 2rem;
+        padding: 0.5rem;
+        transform: scale(120%);
+      }
+    }
+    .content {
+      display: block;
+      width: 100%;
+      height: fit-content;
+      overflow: visible;
+      p {
+        padding: 1.5rem 0rem;
+        padding-right: 0rem;
+        padding-bottom: 4rem;
+        font-size: 1.25rem;
+      }
+      .description {
+        width: 100%;
+      }
+      .image-gallery {
+        color: #626262;
+        display: inline-flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 3rem;
+      }
+    }
+  }
+  @media screen and (max-width: 400px) {
+    h2 {
+      font-size: 3rem;
+    }
+  }
 `;
 
 export default MyProjects;

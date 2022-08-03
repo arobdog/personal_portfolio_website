@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 
 //Styled Components
 export const Section = styled(motion.div)`
-  min-height: 94vh !important;
   max-height: 94vh;
   display: flex;
   align-items: center;
@@ -29,19 +28,20 @@ export const Section = styled(motion.div)`
     height: 50rem;
   }
   @media screen and (max-height: 1000px) {
-    height: 66rem;
+    height: 60rem;
     @media screen and (orientation: landscape) {
     }
   }
   @media screen and (max-height: 850px) {
-    height: 62rem;
+    height: 60rem;
     @media (orientation: landscape) {
-      height: 40rem;
+      height: 30rem;
     }
   }
   @media screen and (max-height: 700px) {
-    height: 35rem;
+    height: 40rem;
     @media screen and (orientation: landscape) {
+      height: 30rem;
     }
   }
 `;

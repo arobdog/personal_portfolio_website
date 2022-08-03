@@ -86,23 +86,23 @@ const GlobalStyle = createGlobalStyle`
         line-height: 150%;
         width: 100%;
         @media screen and (max-width: 1200px){
-            font-size: 1.8rem;
+            font-size: 1.3rem;
             max-width: 50rem;
             display: block;
             position: relative;
             margin: auto;
         }
         @media screen and (max-width: 800px){
-            font-size: 2.1rem;
+            font-size: 1.25rem;
         }
         @media screen and (max-width: 500px){
-            font-size: 2.1rem;
+            font-size: 1.25rem;
         }
         @media screen and (max-height: 850px){
-            font-size: 1.6rem;
+            font-size: 1.25rem;
         }
         @media screen and (max-height: 700px){
-            font-size: 1.3rem;
+            font-size: 1.25rem;
         }
     }
 `;
