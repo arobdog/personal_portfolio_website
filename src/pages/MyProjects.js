@@ -65,18 +65,22 @@ const MyProjects = () => {
         <motion.div className="content">
           <motion.div className="description">
             <motion.p variants={fade}>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora
-              debitis optio vitae minima dolore accusantium sequi non sint
-              cumque temporibus. Totam ipsa enim nulla provident iste,
-              voluptatibus veniam! <br />
+              Ember is a game search site that displays upcoming and populars
+              games. Each game card can be clicked which expands the card and
+              provides more details about the game, including which platforms it
+              is available on, its rating, a synopsis and more pictures.
               <br />
-              Cum inventore tempora doloribus, veritatis incidunt temporibus
-              dolorem cupiditate ipsa quas distinctio consequatur veniam quos
-              iusto sed quisquam velit et aspernatur dolore! <br />
               <br />
-              Cum inventore tempora doloribus, veritatis incidunt temporibus
-              dolorem cupiditate ipsa quas distinctio consequatur veniam quos
-              iusto sed quisquam velit et aspernatur dolore!
+              You can search for a game in the search bar at the top of the
+              page. Relevant games are retrieved and displayed as new cards
+              under the 'Searched Games' section. The data is retrieved from an
+              external API, details can be found at rawg.io.
+              <br />
+              <br />
+              The project was made using <span>React</span>, <span>Redux</span>{" "}
+              for state management, <span>Axios</span> for API requests,{" "}
+              <span>framer-motion</span> for animations and{" "}
+              <span>styled components</span>.
             </motion.p>
           </motion.div>
           <motion.div className="image-gallery noSelect" variants={fade}>
@@ -130,18 +134,23 @@ const MyProjects = () => {
         <motion.div className="content">
           <motion.div className="description">
             <motion.p variants={fade}>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora
-              debitis optio vitae minima dolore accusantium sequi non sint
-              cumque temporibus. Totam ipsa enim nulla provident iste,
-              voluptatibus veniam! <br />
+              Testlab Analyser is the internal data analysis tool I developed at
+              F&P Appliances. It is used to identify and extract refirgeration
+              product features and perform analysis on them. The results are
+              compiled in a summary HTML report (click the external link).{" "}
               <br />
-              Cum inventore tempora doloribus, veritatis incidunt temporibus
-              dolorem cupiditate ipsa quas distinctio consequatur veniam quos
-              iusto sed quisquam velit et aspernatur dolore! <br />
               <br />
-              Cum inventore tempora doloribus, veritatis incidunt temporibus
-              dolorem cupiditate ipsa quas distinctio consequatur veniam quos
-              iusto sed quisquam velit et aspernatur dolore!
+              It can extract Defrost, Warm Zone, Control Zone test cases and
+              more. All cycles are identified and you can select the ones to
+              include in the report. Each cycle is verified against the
+              criterion of that test case.
+              <br />
+              <br />
+              It was developed in <span>Python</span> using <span>Kivy</span>{" "}
+              for the UI, <span>Pandas</span> for data manipulation and
+              analysis, <span>NumPy</span> for mathematical operations,{" "}
+              <span>Plotly</span> for interactive data visualisations and{" "}
+              <span>HTML</span> for report formatting.
             </motion.p>
           </motion.div>
           <motion.div className="image-gallery noSelect" variants={fade}>
