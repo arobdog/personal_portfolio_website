@@ -25,9 +25,9 @@ const AboutMeSection = () => {
           <span>JavaScript</span>, <span>React</span> and <span>Node.js</span>.
         </p>
         <p>
-          My favourite way to learn is through projects and this portfolio
-          allows me to show you. I am most fulfilled when the results of my work
-          improve people's lives.
+          My favourite way to learn is by creating projects and problem solving
+          as I build them. The most fulfilling thing for me is when the results
+          of my work improves people's lives.
         </p>
         <p>
           Apart from coding I enjoy bouldering, learning foreign languages and

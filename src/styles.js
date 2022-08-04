@@ -29,22 +29,17 @@ export const Section = styled(motion.div)`
   @media screen and (max-width: 500px) {
     height: 50rem;
   }
+  @media screen and (max-height: 1500px) {
+    height: 60rem;
+  }
   @media screen and (max-height: 1000px) {
     height: 60rem;
-    @media screen and (orientation: landscape) {
-    }
   }
   @media screen and (max-height: 850px) {
     height: 60rem;
-    @media (orientation: landscape) {
-      height: 45rem;
-    }
   }
   @media screen and (max-height: 700px) {
     height: 45rem;
-    @media screen and (orientation: landscape) {
-      height: 45rem;
-    }
   }
 `;
 export const Description = styled.div`
