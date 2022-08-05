@@ -2,6 +2,7 @@ import React from "react";
 //Import Icons
 import typescript from "../img/skills-icons/typescript.svg";
 import nodejs from "../img/skills-icons/nodejs.svg";
+import expressjs from "../img/skills-icons/expressjs.png";
 import javascript from "../img/skills-icons/javascript.svg";
 import react from "../img/skills-icons/react.svg";
 import python from "../img/skills-icons/python.svg";
@@ -141,6 +142,12 @@ const SkillsSection = ({ skillsSelection, setSkillsSelection }) => {
                     </div>
                     <p>Node.js</p>
                   </Skill>
+                  <Skill>
+                    <div className="icon">
+                      <img src={expressjs} alt="Express js" />
+                    </div>
+                    <p>Express.js</p>
+                  </Skill>
                 </div>
               </div>
             </Skills>
@@ -181,6 +188,12 @@ const SkillsSection = ({ skillsSelection, setSkillsSelection }) => {
                       <img src={nodejs} alt="Node.js" />
                     </div>
                     <p>Node.js</p>
+                  </Skill>
+                  <Skill>
+                    <div className="icon">
+                      <img src={expressjs} alt="Express js" />
+                    </div>
+                    <p>Express.js</p>
                   </Skill>
                 </div>
               </div>
@@ -314,7 +327,7 @@ const Skill = styled.div`
     img {
       margin-bottom: 0.8rem;
       width: 4.7rem;
-      opacity: 0.8;
+      opacity: 0.85;
     }
   }
 `;
