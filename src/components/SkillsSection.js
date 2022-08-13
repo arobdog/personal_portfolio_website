@@ -3,6 +3,8 @@ import React from "react";
 import typescript from "../img/skills-icons/typescript.svg";
 import nodejs from "../img/skills-icons/nodejs.svg";
 import expressjs from "../img/skills-icons/expressjs.png";
+import mongodb from "../img/skills-icons/mongodb-icon.svg";
+import mysql from "../img/skills-icons/mysql-icon.svg";
 import javascript from "../img/skills-icons/javascript.svg";
 import react from "../img/skills-icons/react.svg";
 import python from "../img/skills-icons/python.svg";
@@ -148,6 +150,18 @@ const SkillsSection = ({ skillsSelection, setSkillsSelection }) => {
                     </div>
                     <p>Express.js</p>
                   </Skill>
+                  <Skill>
+                    <div className="icon">
+                      <img src={mongodb} alt="Mongo DB" />
+                    </div>
+                    <p>MongoDB</p>
+                  </Skill>
+                  <Skill>
+                    <div className="icon">
+                      <img src={mysql} alt="My SQL" />
+                    </div>
+                    <p>MySQL</p>
+                  </Skill>
                 </div>
               </div>
             </Skills>
@@ -194,6 +208,18 @@ const SkillsSection = ({ skillsSelection, setSkillsSelection }) => {
                       <img src={expressjs} alt="Express js" />
                     </div>
                     <p>Express.js</p>
+                  </Skill>
+                  <Skill>
+                    <div className="icon">
+                      <img src={mongodb} alt="Mongo DB" />
+                    </div>
+                    <p>MongoDB</p>
+                  </Skill>
+                  <Skill>
+                    <div className="icon">
+                      <img src={mysql} alt="My SQL" />
+                    </div>
+                    <p>MySQL</p>
                   </Skill>
                 </div>
               </div>
